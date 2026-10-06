@@ -1,0 +1,8 @@
+# Stage 1 (scripts/01_extract_embeddings.py) only.
+# Install these on top of requirements.txt when you need to regenerate
+# embeddings rather than analyse the released ones.
+torch>=2.0
+transformers>=4.30
+datasets>=2.14
+sentence-transformers>=2.2
+Pillow>=9.0
