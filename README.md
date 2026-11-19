@@ -1,270 +1,567 @@
+
+<div align="center">
+
 # Before the First Circuit
 
-Code and data for *Zero-Shot Quantum Kernel Selection on Foundation Models with
-Kernel-Target Alignment*.
+**Zero-Shot Quantum Kernel Selection on Foundation Models with Kernel-Target Alignment**
 
-Computing a quantum kernel is expensive, and on most encoder and task pairs it
-does not beat a classical alternative. This repository implements the screening
-rule from the paper: a classical quantity, computable in under a second from the
-training features and labels alone, that predicts the quantum versus classical
-performance gap before any circuit is run.
+Mohd. Farhan Israk Soumik · Abdur R. Shahid
 
-The rule is one line:
+[![Paper](https://img.shields.io/badge/Paper-Under%20review-555555)](#citation)
+[![Configurations](https://img.shields.io/badge/Configurations-30-0072B2)](#experimental-grid)
+[![Qubits](https://img.shields.io/badge/Qubits-8-009E73)](#method)
+[![Regression tests](https://img.shields.io/badge/Regression%20tests-43-E69F00)](#tests)
+[![CPU verification](https://img.shields.io/badge/Verification-CPU-CC79A7)](#quick-start)
+
+[Quick start](#quick-start) · [Screening rule](#screening-rule) · [Results](#key-results) · [Reproduction](#reproduce-the-paper) · [Repository](#repository-structure) · [Citation](#citation)
+
+</div>
+
+---
+
+## Overview
+
+Can we anticipate whether a quantum kernel will underperform a classical alternative **before evaluating a quantum circuit**?
+
+This repository investigates that question using frozen foundation-model embeddings and classical kernel-target alignment. The diagnostic uses training features and labels, requires no quantum resources, and takes under a second in the reported setting.
+
+## Screening rule
 
 ```python
 from qks.diagnostics import classical_alignment
 
-if classical_alignment(X_train, y_train) < 0.05:
-    pass    # skip the quantum kernel; it will not help on this configuration
+A_C = classical_alignment(X_train, y_train)
+
+if A_C < 0.05:
+    print("Flagged: deprioritize quantum kernel evaluation")
+else:
+    print("Not flagged: further evaluation may be warranted")
 ```
 
-Across the paper's eighteen-configuration main grid this flags eight
-configurations, every one of them a deficit, saving about eleven hours of
-simulation without passing over a single case where the quantum kernel matched
-the best classical kernel.
+> [!IMPORTANT]
+> The reference threshold is an empirical screening criterion, not a guarantee of quantum underperformance. A configuration that is not flagged is not predicted to achieve quantum advantage. The rule uses labeled training data; it is not zero-shot classification.
+
+```mermaid
+flowchart TD
+    A[Training features and labels] --> B[Classical RBF kernel]
+    B --> C[Kernel-target alignment]
+    C --> D{"Alignment below 0.05?"}
+    D -->|Yes| E[Flag for deprioritization]
+    D -->|No| F[Consider quantum kernel evaluation]
+    classDef classical fill:#e4f0fa,stroke:#0072B2,color:#16394d
+    classDef flagged fill:#fcf2d9,stroke:#E69F00,color:#533b00
+    classDef retained fill:#dff4eb,stroke:#009E73,color:#17483b
+    class A,B,C,D classical
+    class E flagged
+    class F retained
+```
+
+## Key results
+
+| Main-grid configurations | Multilingual configurations | Flagged main-grid configurations | Pairwise evaluations potentially avoided |
+| :---: | :---: | :---: | :---: |
+| 18 | 12 | 8 | ~4 million |
+
+All eight flagged main-grid configurations exhibited negative observed performance gaps at the reference threshold. Skipping these configurations would avoid about eleven hours of the original pairwise simulation procedure. This is not a hardware-runtime measurement, and negative point estimates are not necessarily statistically significant losses.
+
+<details>
+<summary><strong>What do the screening regions mean?</strong></summary>
+
+<br>
+
+| Classical alignment | Interpretation in the evaluated regime |
+|---|---|
+| Below 0.03 | Observed deficits in the evaluated configurations |
+| 0.03–0.08 | Inconclusive region |
+| Above 0.08 | No statistically significant deficit observed |
+
+The graded regions were derived from the observed results and are exploratory. The reference threshold of 0.05 is used in the main screening analysis. Neither high alignment nor absence of a significant deficit establishes equivalence or quantum advantage.
+
+</details>
+
+<details>
+<summary><strong>What can the rule not establish?</strong></summary>
+
+<br>
+
+- It is primarily a task-level diagnostic, not an encoder-selection criterion.
+- It is calibrated for the evaluated feature maps, sample size and preprocessing settings.
+- It cannot establish whether a quantum feature map captures structure inaccessible to the classical diagnostic.
+- The multilingual block was excluded from regression fitting but informed threshold selection.
+
+</details>
+
+[Back to top](#before-the-first-circuit)
 
 ---
 
 ## Quick start
 
+Choose what you want to reproduce:
+
+| I want to… | Start here | GPU |
+|---|---|---|
+| Verify the canonical results | [Verification](#verify-the-installation) | No |
+| Run the statistical analysis | [Canonical analysis](#canonical-analysis) | No |
+| Rebuild embeddings, kernels and results | [Full pipeline](#reproduce-the-paper) | Embedding extraction |
+| Inspect the implementation | [Repository structure](#repository-structure) | No |
+
+### Verify the installation
+
+Clone the repository and install the required dependencies.
+
 ```bash
-git clone <repository-url> && cd qkernel-screening
+git clone <repository-url>
+cd qkernel-screening
 pip install -r requirements.txt
 python scripts/00_verify_install.py
 ```
 
-`00_verify_install.py` needs no GPU, no network, and no downloaded embeddings.
-It recomputes every statistic the paper reports from the canonical result files
-in `data/` and prints a pass or fail line for each. A correct install ends with:
+The verification script runs from the canonical files in [`data/`](data/). After installation, it needs neither a GPU nor a network connection or downloaded embeddings.
 
-```
+The expected output is:
+
+```text
 ALL 17 CHECKS PASSED. This installation reproduces the paper.
 ```
 
-To see the full analysis rather than a pass/fail summary:
+This verifies the scripted checks against the released records; it is not a rerun of all embedding extraction and kernel experiments.
+
+### Canonical analysis
 
 ```bash
 python scripts/05_analysis.py
 ```
 
----
+Use this route to inspect the full statistical analysis without generating embeddings or recomputing kernels.
 
-## What is in here
-
-```
-qks/                        the package
-  config.py                 the 30-configuration grid, constants, colour palette
-  datasets.py               seven dataset loaders, reproducing the original sampling
-  encoders.py               eleven frozen encoders, with the library-version guards
-  features.py               PCA to 8 dimensions, scaling to [0, pi], the fixed draw
-  kernels.py                four quantum feature maps, six kernel settings
-  diagnostics.py            alignment, concentration, geometric difference
-  evaluate.py               classical baselines, the utility gap, bootstrap intervals
-  analysis.py               correlations, permutation test, transfer, the screen
-  io.py                     reading and writing artifacts
-
-scripts/
-  00_verify_install.py      reproduce every published number (start here)
-  01_extract_embeddings.py  stage 1, needs a GPU and network
-  02_compute_kernels.py     stage 2, kernels and per-configuration records
-  03_ablation_featuremaps.py  the gap under six quantum kernels
-  04_seed_study.py          seed variability at the full sample size
-  05_analysis.py            the full analysis report
-
-figures/                    one script per paper figure, all regenerate from data/
-tests/                      43 regression tests; run with pytest
-data/                       canonical result files, tracked in git
-notebooks/                  the original exploratory notebooks
-```
+[Back to top](#before-the-first-circuit)
 
 ---
 
-## Reproducing the paper
+## Reproduce the paper
 
-The pipeline is four stages. Only the first needs a GPU, and the released
-canonical files let you skip it entirely if you only want the analysis.
+The full experimental pipeline contains four stages. Expand each stage to see its commands, requirements and expected outputs.
 
-### Stage 1, embeddings (GPU, about 30 to 60 minutes)
+```mermaid
+flowchart LR
+    A[1. Embeddings] --> B[2. Kernels and records]
+    B --> C[3. Robustness]
+    C --> D[4. Analysis and figures]
+    E[Released canonical data] --> D
+    classDef text fill:#e4f0fa,stroke:#0072B2,color:#16394d
+    classDef vision fill:#fcf2d9,stroke:#E69F00,color:#533b00
+    classDef multi fill:#dff4eb,stroke:#009E73,color:#17483b
+    classDef multilingual fill:#f9e8f3,stroke:#CC79A7,color:#563349
+    class A text
+    class B vision
+    class C multi
+    class D,E multilingual
+```
+
+<details open>
+<summary><strong>Stage 1 — Extract embeddings (GPU and network, approximately 30–60 minutes)</strong></summary>
+
+<br>
 
 ```bash
 pip install -r requirements-extract.txt
 python scripts/01_extract_embeddings.py
 ```
 
-Downloads each dataset, runs the frozen encoder, and writes
-`data/<tag>_seed42_raw.npz`. Configurations that already have a file are
-skipped, so an interrupted run can simply be restarted.
+Downloads datasets, runs the frozen encoders and writes `data/<tag>_seed42_raw.npz`. Existing configurations are skipped, so interrupted runs can be restarted.
 
-### Stage 2, kernels and records (CPU, a few minutes)
+For the full seed study, generate the additional embeddings with:
+
+```bash
+python scripts/01_extract_embeddings.py --seeds 42 7 123
+```
+
+**Entry point:** [`01_extract_embeddings.py`](scripts/01_extract_embeddings.py)
+
+</details>
+
+<details>
+<summary><strong>Stage 2 — Compute kernels and records (CPU, a few minutes)</strong></summary>
+
+<br>
 
 ```bash
 python scripts/02_compute_kernels.py
 ```
 
-Applies the fixed preprocessing, builds the quantum kernel, fits the three
-classical baselines and the quantum SVM, and writes one record per
-configuration with the gap, its bootstrap interval, and every diagnostic.
+Applies the fixed preprocessing, constructs the quantum kernel, fits the three classical baseline SVMs and quantum SVM, and writes a record for each configuration containing F1 scores, utility gap, bootstrap interval and diagnostics.
 
-### Stage 3, robustness
+**Entry point:** [`02_compute_kernels.py`](scripts/02_compute_kernels.py)
+
+</details>
+
+<details>
+<summary><strong>Stage 3 — Feature-map and seed robustness</strong></summary>
+
+<br>
 
 ```bash
-python scripts/03_ablation_featuremaps.py     # six quantum kernels, ~15 min
-python scripts/04_seed_study.py               # needs stage 1 with --seeds 42 7 123
+python scripts/03_ablation_featuremaps.py
+python scripts/04_seed_study.py
 ```
 
-### Stage 4, analysis and figures
+The feature-map ablation evaluates six kernel settings (approximately 15 minutes). The seed study requires embeddings for seeds 42, 7 and 123 from Stage 1.
+
+**Entry points:**
+
+- [`03_ablation_featuremaps.py`](scripts/03_ablation_featuremaps.py)
+- [`04_seed_study.py`](scripts/04_seed_study.py)
+
+</details>
+
+<details>
+<summary><strong>Stage 4 — Analyze results and regenerate figures</strong></summary>
+
+<br>
 
 ```bash
-python scripts/05_analysis.py --from-records  # your own run
-python scripts/05_analysis.py                 # the released canonical files
+# Analyze your own computed records
+python scripts/05_analysis.py --from-records
+
+# Analyze the released canonical files
+python scripts/05_analysis.py
+
+# Regenerate all figures
 for f in figures/*.py; do python "$f"; done
 ```
 
+**Entry points:**
+
+- [`05_analysis.py`](scripts/05_analysis.py)
+- [`figures/`](figures/)
+
+</details>
+
+Reported runtimes are approximate and machine-dependent. The first stage is the documented GPU-dependent stage; the canonical analysis can bypass it entirely.
+
+[Back to top](#before-the-first-circuit)
+
 ---
 
-## The experimental grid
+## Experimental grid
 
-Thirty configurations, kept in two parts by design.
+<details open>
+<summary><strong>Main grid — 18 configurations</strong></summary>
 
-**Main grid, 18 configurations.** Six datasets in three domains, each paired
-with three encoders drawn from distinct pretraining paradigms. All model
-fitting and all headline statistics come from this block.
+<br>
+
+Six datasets across three domains, each paired with three frozen encoders. This block is used to fit the predictive models and establish the headline main-grid results.
 
 | Domain | Datasets | Encoders |
 |---|---|---|
-| Text | SST-2, AG News | BERT, RoBERTa, MiniLM |
-| Vision | CIFAR-10, Fashion-MNIST | CLIP, DINOv2, ViT |
-| Multimodal | MSCOCO, SNLI-VE | CLIP, SigLIP, FLAVA (joint) |
+| ![Text](https://img.shields.io/badge/Text-0072B2) | SST-2, AG News | BERT, RoBERTa, MiniLM |
+| ![Vision](https://img.shields.io/badge/Vision-E69F00) | CIFAR-10, Fashion-MNIST | CLIP, DINOv2, ViT |
+| ![Multimodal](https://img.shields.io/badge/Multimodal-009E73) | MSCOCO, SNLI-VE | CLIP, SigLIP, FLAVA (joint) |
 
-**Held-out block, 12 configurations.** Three-class sentiment in six languages
-under mBERT and XLM-R. No fitted model in the paper uses it.
+</details>
 
-One qualification is worth stating plainly, because it changes how the held-out
-evidence should be read. The screening threshold of 0.05 was fixed during
-development on a set of configurations that included these twelve, and was not
-revised afterwards. The fitted model is genuinely out of sample on this block;
-the threshold is not. Results there are a consistency check rather than a strict
-held-out test.
+<details>
+<summary><strong>Multilingual block — 12 configurations</strong></summary>
+
+<br>
+
+Three-class sentiment classification in six languages under mBERT and XLM-R.
+
+| Language | Code |
+|---|---|
+| Arabic | ar |
+| Chinese | zh |
+| English | en |
+| German | de |
+| Hindi | hi |
+| Spanish | es |
+
+The regression models are not fitted on this block.
+
+**Note:** The reference threshold of 0.05 was fixed during development using configurations that included this block. Its regression evaluation is out of sample, but threshold performance here is a consistency check rather than independent threshold validation.
+
+</details>
+
+**Grid definition:** [`qks/config.py`](qks/config.py)
+
+**Canonical split:** [`data/grid_split.json`](data/grid_split.json)
 
 ---
 
-## The fixed pipeline
+## Method
 
-Every configuration goes through exactly the same path, which is what makes the
-grid comparable:
+<details>
+<summary><strong>Fixed classification pipeline</strong></summary>
 
-1. A frozen encoder produces embeddings; weights are never updated.
-2. PCA to 8 dimensions, one component per qubit, fitted on the training pool.
-3. Min-max scaling to `[0, pi]`, fitted on the training pool, test values
-   clipped to the same interval.
-4. A fixed-seed draw of 1000 training and 200 test points.
-5. A single-layer IQP map on 8 qubits with a linear chain of ZZ interactions;
-   the kernel is the fidelity overlap, computed exactly on a statevector
-   simulator.
-6. Three classical SVMs on the identical features, and a quantum SVM on the
-   precomputed Gram matrix, all at `C = 1`.
+<br>
 
-The utility gap is
+```mermaid
+flowchart TD
+    A[Input data] --> B[Frozen foundation-model encoder]
+    B --> C[PCA: 8 dimensions]
+    C --> D[Min-max scaling]
+    D --> E[Classical kernels]
+    D --> F[Quantum fidelity kernel]
+    E --> G[Classical SVMs]
+    F --> H[Quantum kernel SVM]
+    G --> I[Quantum-classical F1 gap]
+    H --> I
+    E --> J[Classical kernel-target alignment]
+    J --> K[Performance prediction and screening]
+    I --> K
 
+    classDef classical fill:#e4f0fa,stroke:#0072B2,color:#16394d
+    classDef quantum fill:#fcf2d9,stroke:#E69F00,color:#533b00
+    classDef shared fill:#dff4eb,stroke:#009E73,color:#17483b
+    classDef analysis fill:#f9e8f3,stroke:#CC79A7,color:#563349
+
+    class A,B,C,D shared
+    class E,G,J classical
+    class F,H quantum
+    class I,K analysis
 ```
+
+1. Extract embeddings from a frozen encoder without updating its weights.
+2. Reduce the features to eight PCA components, one per input qubit, fitting PCA on the training data.
+3. Apply min-max scaling to `[0, pi]` fitted on the training data; clip test features to the same range.
+4. Use the fixed-seed selection of 1,000 training and 200 test samples.
+5. Evaluate an eight-qubit, single-layer IQP fidelity kernel with a linear chain of ZZ interactions on an exact statevector simulator.
+6. Fit linear, RBF and polynomial SVMs on identical features and a quantum SVM on the precomputed quantum Gram matrix, all using `C = 1`.
+
+### Utility gap
+
+```text
 Delta = F1_quantum - max(F1_linear, F1_rbf, F1_poly)
 ```
 
-Taking the maximum over three baselines is deliberately conservative: the
-quantum kernel has to beat the strongest classical competitor, not an average
-one.
+The maximum is taken over the observed classical test-set F1 scores. This is a conservative retrospective comparison, not validation-based model selection; it may favor the classical baseline.
 
-### Why the kernel computes in seconds here
+**Implementation:**
 
-The main run evaluated one circuit per pair of points, which is how the kernel
-must be obtained on hardware, where states cannot be read out and each overlap
-is estimated by measurement. That cost about 83 minutes per kernel matrix at
-N = 1000.
+[`features.py`](qks/features.py) · [`kernels.py`](qks/kernels.py) · [`evaluate.py`](qks/evaluate.py)
 
-Because `K(x, x') = |<phi(x')|phi(x)>|^2` with `|phi(x)> = U(x)|0>`, this code
-simulates each point's state once and forms every entry with one matrix product.
-On an exact statevector simulator the two routes are *identical*, not
-approximately equal. `qks.kernels.self_check()` asserts the equality for every
-feature map and is called by every script before anything expensive runs; the
-test suite checks it too.
+</details>
 
-The 83-minute figure in the paper is therefore the hardware-equivalent cost, and
-the seconds here are a simulator shortcut, not a different method.
+<details>
+<summary><strong>Why kernel construction takes seconds in the released implementation</strong></summary>
+
+<br>
+
+The original pairwise evaluation procedure took approximately 83 minutes for a training matrix at N = 1,000. On an exact simulator, each feature-map state can instead be computed once and the matrix assembled with a matrix product:
+
+```text
+K(x, x') = |<phi(x')|phi(x)>|^2
+phi(x)   = U(x)|0>
+```
+
+Both procedures give the same exact fidelity kernel up to numerical precision.
+
+The function `qks.kernels.self_check()` and regression tests check agreement for every feature map.
+
+The 83-minute runtime refers to the original pairwise simulator implementation, not measured runtime on quantum hardware or an unavoidable simulation cost.
+
+**Implementation:** [`qks/kernels.py`](qks/kernels.py)
+
+</details>
+
+[Back to top](#before-the-first-circuit)
 
 ---
 
-## Known deviations
+## Repository structure
 
-Two things in this repository differ from a naive reading of the paper. Both are
-documented here rather than silently fixed, because either would change results
-if handled differently.
+<details open>
+<summary><strong>Core package — qks/</strong></summary>
 
-**MiniLM uses mean pooling, not the first token.** Section 3.3 of the paper
-groups MiniLM with BERT, RoBERTa, mBERT and XLM-R and says the first-token
-representation is taken without normalization. The original run accessed MiniLM
-through `sentence-transformers`, whose `.encode()` applies mean pooling and L2
-normalization internally. This code reproduces the original run, so MiniLM is
-mean-pooled and normalized. Two configurations are affected, SST-2/MiniLM and
-AG News/MiniLM. No reported number changes; the paper's sentence is what is
-inaccurate.
+<br>
 
-**Library versions move the features slightly.** Re-deriving features from raw
-embeddings on a different scikit-learn version reproduces the published features
-to about 1e-5 rather than exactly, because the randomized PCA solver differs
-between releases. The effect on reported quantities:
-
-| quantity | effect |
+| File | Responsibility |
 |---|---|
-| F1 scores, utility gap, bootstrap intervals | none; reproduce exactly |
-| alignment, concentration, off-diagonals | about 1e-7 |
-| geometric difference | about 3e-3, amplified by its ridge inverse |
+| [`config.py`](qks/config.py) | Configuration grid, constants and figure palette |
+| [`datasets.py`](qks/datasets.py) | Seven dataset loaders and original sampling |
+| [`encoders.py`](qks/encoders.py) | Frozen encoder implementations and version guards |
+| [`features.py`](qks/features.py) | PCA, scaling and fixed sampling |
+| [`kernels.py`](qks/kernels.py) | Four feature maps and six kernel settings |
+| [`diagnostics.py`](qks/diagnostics.py) | Alignment, concentration and geometric difference |
+| [`evaluate.py`](qks/evaluate.py) | Baselines, utility gap and bootstrap intervals |
+| [`analysis.py`](qks/analysis.py) | Correlation, permutation, transfer and screening analyses |
+| [`io.py`](qks/io.py) | Artifact input/output |
 
-Two library settings also matter enough that `qks.encoders.prepare_torch()`
-forces them, after both were found to move results during the seed study. TF32
-must be off, because Ampere GPUs enable it by default and it perturbs the
-patch-embedding layer at the 1e-3 level. Image processors must be loaded with
-`use_fast=False`, because newer `transformers` resizes with torch rather than
-PIL, and for 28x28 and 32x32 inputs upsampled to 224 the two disagree enough to
-move the gap.
+</details>
+
+<details>
+<summary><strong>Experiment scripts — scripts/</strong></summary>
+
+<br>
+
+| Script | Purpose |
+|---|---|
+| [`00_verify_install.py`](scripts/00_verify_install.py) | Verify canonical statistics |
+| [`01_extract_embeddings.py`](scripts/01_extract_embeddings.py) | Extract frozen embeddings |
+| [`02_compute_kernels.py`](scripts/02_compute_kernels.py) | Compute kernels and configuration records |
+| [`03_ablation_featuremaps.py`](scripts/03_ablation_featuremaps.py) | Compare six quantum kernel settings |
+| [`04_seed_study.py`](scripts/04_seed_study.py) | Evaluate seed variability |
+| [`05_analysis.py`](scripts/05_analysis.py) | Produce the analysis report |
+
+</details>
+
+<details>
+<summary><strong>Data, plotting and exploratory material</strong></summary>
+
+<br>
+
+| Directory | Contents |
+|---|---|
+| [`data/`](data/) | Canonical result files |
+| [`figures/`](figures/) | Figure generation scripts |
+| [`tests/`](tests/) | Regression tests |
+| [`notebooks/`](notebooks/) | Original exploratory notebooks |
+
+</details>
+
+<details>
+<summary><strong>Complete directory tree</strong></summary>
+
+<br>
+
+```text
+qkernel-screening/
+│
+├── qks/
+│   ├── config.py
+│   ├── datasets.py
+│   ├── encoders.py
+│   ├── features.py
+│   ├── kernels.py
+│   ├── diagnostics.py
+│   ├── evaluate.py
+│   ├── analysis.py
+│   └── io.py
+│
+├── scripts/
+│   ├── 00_verify_install.py
+│   ├── 01_extract_embeddings.py
+│   ├── 02_compute_kernels.py
+│   ├── 03_ablation_featuremaps.py
+│   ├── 04_seed_study.py
+│   └── 05_analysis.py
+│
+├── data/
+│   ├── grid30_canonical.json
+│   ├── grid_split.json
+│   └── featuremap_ablation_all30.json
+│
+├── figures/
+├── tests/
+├── notebooks/
+├── requirements.txt
+├── requirements-extract.txt
+├── LICENSE
+└── README.md
+```
+
+</details>
 
 ---
 
 ## Data files
 
-`data/` ships the canonical result files, which are tracked in git because every
-number in the paper traces to them.
-
-| file | contents |
+| Canonical file | Contents |
 |---|---|
-| `grid30_canonical.json` | all 30 configurations, every field |
-| `grid_split.json` | the same records split into `main` and `heldout` |
-| `featuremap_ablation_all30.json` | 30 configurations under 6 quantum kernels |
+| [`grid30_canonical.json`](data/grid30_canonical.json) | All 30 configurations and their recorded fields |
+| [`grid_split.json`](data/grid_split.json) | Records partitioned into `main` and `heldout` |
+| [`featuremap_ablation_all30.json`](data/featuremap_ablation_all30.json) | 30 configurations under six quantum kernels |
 
-Generated intermediates, raw embeddings, cached kernels and per-run records, are
-gitignored. They are large and fully reproducible from the above.
+Raw embeddings, cached kernels and generated per-run records are excluded from version control because of their size. They can be regenerated using the experimental pipeline and original data sources.
+
+---
+
+## Reproducibility notes
+
+<details>
+<summary><strong>MiniLM pooling and normalization</strong></summary>
+
+<br>
+
+The original implementation accesses MiniLM through `sentence-transformers`, which uses mean pooling and L2 normalization, unlike the first-token representations used for BERT, RoBERTa, mBERT and XLM-R.
+
+This affects two configurations:
+
+- SST-2 / MiniLM
+- AG News / MiniLM
+
+The revised manuscript's methodology reflects this distinction. The reported results do not need to change because of this clarification.
+
+</details>
+
+<details>
+<summary><strong>Library-version sensitivity</strong></summary>
+
+<br>
+
+Re-deriving features from raw embeddings on a different scikit-learn version can result in differences of approximately `1e-5` because of randomized PCA solver behavior.
+
+| Quantity | Observed effect |
+|---|---|
+| F1, utility gap and bootstrap intervals | No observed change |
+| Alignment, concentration and off-diagonal similarities | Approximately `1e-7` |
+| Geometric difference | Approximately `3e-3`, amplified by the regularized inverse |
+
+</details>
+
+<details>
+<summary><strong>GPU precision and image preprocessing</strong></summary>
+
+<br>
+
+The encoder implementation documents two settings that matter:
+
+- Disable TF32 using `qks.encoders.prepare_torch()` to avoid precision differences in patch embeddings.
+- Load image processors with `use_fast=False` to retain the original resizing behavior rather than newer tensor-based resizing.
+
+These settings are intended to reproduce the original runs, especially for small images upsampled to 224 × 224.
+
+</details>
+
+[Back to top](#before-the-first-circuit)
 
 ---
 
 ## Tests
+
+![Regression tests](https://img.shields.io/badge/Regression%20tests-43-009E73)
+![GPU](https://img.shields.io/badge/GPU-Not%20required-0072B2)
+![Network](https://img.shields.io/badge/Network-Not%20required-E69F00)
 
 ```bash
 pip install pytest
 pytest
 ```
 
-43 tests covering the kernel implementation, the mathematical properties of each
-diagnostic, every published statistic, the screening rule, and the integrity of
-the grid definition against the released records. They run in about six seconds
-and need no GPU or network.
+The documented suite contains 43 regression tests covering:
+
+- Quantum kernel implementations.
+- Mathematical properties of the diagnostics.
+- Reported statistical results.
+- Screening decisions.
+- Configuration integrity against the released records.
+
+The tests are designed to run without a GPU or network after dependencies are installed, taking approximately six seconds in the reported environment.
+
+**Resources:** [`tests/`](tests/) · [`00_verify_install.py`](scripts/00_verify_install.py)
 
 ---
 
 ## Citation
 
+If you use this repository in your research, please cite the accompanying manuscript:
+
 ```bibtex
 @article{soumik2026beforethefirstcircuit,
-  title  = {Before the First Circuit: Zero-Shot Quantum Kernel Selection on
-            Foundation Models with Kernel-Target Alignment},
+  title  = {Before the First Circuit: Zero-Shot Quantum Kernel
+            Selection on Foundation Models with
+            Kernel-Target Alignment},
   author = {Soumik, Mohd. Farhan Israk and Shahid, Abdur R.},
   year   = {2026},
   note   = {Under review}
@@ -273,5 +570,16 @@ and need no GPU or network.
 
 ## License
 
-See `LICENSE`. The datasets and pretrained encoders carry their own licenses and
-are not redistributed here; the loaders fetch them from their original sources.
+See [`LICENSE`](LICENSE) for repository licensing information.
+
+The datasets and pretrained encoders retain their original licenses and are obtained from their respective sources rather than redistributed here.
+
+---
+
+<div align="center">
+
+**Before the First Circuit**
+
+[Back to top](#before-the-first-circuit) · [Quick start](#quick-start) · [Reproduce results](#reproduce-the-paper) · [Citation](#citation)
+
+</div>
