@@ -5,7 +5,7 @@
 
 **Zero-Shot Quantum Kernel Selection on Foundation Models with Kernel-Target Alignment**
 
-Mohd. Farhan Israk Soumik · Abdur R. Shahid
+Mohd. Farhan Israk Soumik ·Ahmed Imteaj· Abdur R. Shahid
 
 [![Paper](https://img.shields.io/badge/Paper-Under%20review-555555)](#citation)
 [![Configurations](https://img.shields.io/badge/Configurations-30-0072B2)](#experimental-grid)
