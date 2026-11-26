@@ -1,0 +1,54 @@
+PROJECTED QUANTUM KERNEL CONTROL. Macro-F1; classical comparators from the v3 record; encoding scale s = 1.
+Fixed: C = 1, gamma = 1/median(d^2). Tuned: C and bandwidth multiplier by training CV (v3 fold seeds).
+
+                    subset           kernel  n  mean_gap  median_gap  pearson_r  spearman  exact_p  assignments  n_flagged  n_flagged_negative  mean_gap_flagged  max_flagged_gap  ci_above_zero  ci_below_zero
+                 main (18)  Fidelity, fixed 18  -0.01611    -0.01219    0.78280   0.72719  0.74151        46656          8                   8          -0.03085         -0.00127            NaN            NaN
+                 main (18) Projected, fixed 18  -0.06992    -0.05013    0.13251  -0.12693  0.60642        46656          8                   7          -0.05390          0.02427            0.0           12.0
+                 main (18)  Fidelity, tuned 18   0.01044     0.00000   -0.26789  -0.42208  0.17816        46656          8                   2           0.02153          0.14316            NaN            NaN
+                 main (18) Projected, tuned 18  -0.05120    -0.04739    0.03705   0.11042  0.90726        46656          8                   6          -0.03554          0.17497            1.0           11.0
+main, chance-level removed  Fidelity, fixed 14  -0.01310    -0.00532    0.85764   0.72671      NaN            0          4                   4          -0.03506         -0.01541            NaN            NaN
+main, chance-level removed Projected, fixed 14  -0.08790    -0.07928    0.56684   0.54725      NaN            0          4                   4          -0.10085         -0.01953            0.0           12.0
+main, chance-level removed  Fidelity, tuned 14   0.00153     0.00000    0.00017   0.10092      NaN            0          4                   2           0.00140          0.01476            NaN            NaN
+main, chance-level removed Projected, tuned 14  -0.07147    -0.07847    0.62491   0.72308      NaN            0          4                   4          -0.09080         -0.03478            0.0           10.0
+             held-out (12)  Fidelity, fixed 12  -0.02104    -0.02268    0.00143   0.09790  0.98438           64          5                   3          -0.01823          0.03984            NaN            NaN
+             held-out (12) Projected, fixed 12  -0.04272    -0.04876   -0.03884   0.16783  1.00000           64          5                   4          -0.03649          0.06500            0.0            4.0
+             held-out (12)  Fidelity, tuned 12  -0.00312    -0.00500    0.31118   0.39860  0.42188           64          5                   3          -0.00996          0.03912            NaN            NaN
+             held-out (12) Projected, tuned 12  -0.04468    -0.04931    0.08239   0.20280  0.64062           64          5                   4          -0.05190          0.00835            0.0            3.0
+
+Medians by block:
+          offdiag_fidelity  offdiag_projected_gamma1  bloch_length_mean  cka_fidelity_vs_rbf  cka_projected_vs_rbf  agree_projected_classical_fixed  agree_projected_fidelity_fixed  projected_minus_fidelity_fixed
+block                                                                                                                                                                                                              
+held-out           0.16570                   0.33392            0.44375              0.63612               0.46955                           0.6700                          0.7175                        -0.01241
+main               0.03646                   0.21644            0.44133              0.56458               0.41077                           0.7475                          0.7525                        -0.05499
+
+                    tag  alignment  at_chance  fidelity_fixed_gap  projected_fixed_gap  projected_tuned_gap  m_selected  C_selected
+                ag_news     0.3231      False             -0.0137              -0.1943              -0.1064      1.0000        10.0
+          agnews_minilm     0.4508      False             -0.0106              -0.1678              -0.1683      1.0000        10.0
+         agnews_roberta     0.3804      False              0.0057              -0.1198              -0.0969      4.0000         1.0
+                cifar10     0.7083      False              0.0000              -0.0650              -0.0600      1.0000         1.0
+           fashion_clip     0.8268      False              0.0000              -0.0200              -0.0150      0.2500        10.0
+         fashion_dinov2     0.7551      False              0.0000               0.0000              -0.0100      4.0000         1.0
+                 mscoco     0.0180      False             -0.0447              -0.1457              -0.1156      4.0000         1.0
+          mscoco_siglip     0.0189      False             -0.0154              -0.1446              -0.1144      4.0000         1.0
+ multiling_mbert_arabic     0.0250      False             -0.0655              -0.0565              -0.0565      1.0000         1.0
+multiling_mbert_chinese     0.0521      False             -0.0718              -0.1177              -0.0631      0.2500        10.0
+multiling_mbert_english     0.0323      False              0.0140              -0.0945              -0.0989      0.0625        10.0
+ multiling_mbert_german     0.1066      False             -0.0125               0.0037               0.0177      1.0000         1.0
+  multiling_mbert_hindi     0.0043       True              0.0398               0.0650               0.0083      4.0000         1.0
+multiling_mbert_spanish     0.0450      False             -0.0356              -0.0358              -0.0703      0.2500        10.0
+  multiling_xlmr_arabic     0.0779      False              0.0102              -0.0410              -0.0407      4.0000         1.0
+ multiling_xlmr_chinese     0.1175      False             -0.0253              -0.0317              -0.0299      0.2500        10.0
+ multiling_xlmr_english     0.0557      False             -0.0677              -0.0758              -0.0653      4.0000         1.0
+  multiling_xlmr_german     0.0954      False             -0.0201              -0.0752              -0.0987      1.0000        10.0
+   multiling_xlmr_hindi     0.0038      False             -0.0439              -0.0606              -0.0421     16.0000       100.0
+ multiling_xlmr_spanish     0.0595      False              0.0258               0.0075               0.0033      1.0000         1.0
+                 snlive     0.0024       True             -0.0315               0.0243              -0.0861     64.0000       100.0
+          snlive_siglip     0.0035       True             -0.0488              -0.0147              -0.0255     16.0000        10.0
+            sst2_minilm     0.0944      False             -0.0345              -0.1401              -0.1056      0.0625      1000.0
+           sst2_roberta     0.0120       True             -0.0013              -0.0312               0.0156      0.0625      1000.0
+              sst2_bert     0.0390      False             -0.0465              -0.0195              -0.0348      0.0625       100.0
+         cifar10_dinov2     0.6915      False              0.0000              -0.0200              -0.0150      4.0000         1.0
+            cifar10_vit     0.7154      False              0.0050              -0.0552              -0.0300      0.2500       100.0
+            fashion_vit     0.6527      False              0.0050              -0.0451              -0.0300      4.0000        10.0
+           snlive_flava     0.0068       True             -0.0251              -0.0062               0.1750      0.0156        10.0
+           mscoco_flava     0.0183      False             -0.0337              -0.0936              -0.0984      4.0000         1.0

@@ -1,0 +1,302 @@
+{
+  "librispeech_16q|quantum|42": {
+    "complete": true,
+    "tag": "librispeech_16q",
+    "kind": "quantum",
+    "seed": 42,
+    "task": "clean_vs_other",
+    "lira_auc": 0.9990865302734375,
+    "lira_tpr": {
+      "0.001": 0.93009375,
+      "0.01": 0.9795,
+      "0.05": 0.99703125
+    },
+    "thresh_auc": 0.9867390166015625,
+    "thresh_tpr": {
+      "0.001": 0.00115625,
+      "0.01": 0.80934375,
+      "0.05": 0.97403125
+    },
+    "neg_control_auc": 0.4993676123046875,
+    "pos_control_auc": 0.9999965625,
+    "pos_control_fit": 1.0,
+    "train_acc": 1.0,
+    "test_acc": 0.532,
+    "gap": 0.46799999999999997
+  },
+  "librispeech_16q|linear|42": {
+    "complete": true,
+    "tag": "librispeech_16q",
+    "kind": "linear",
+    "seed": 42,
+    "task": "clean_vs_other",
+    "lira_auc": 0.5799724746093751,
+    "lira_tpr": {
+      "0.001": 0.00190625,
+      "0.01": 0.0198125,
+      "0.05": 0.08465625
+    },
+    "thresh_auc": 0.5416740068359376,
+    "thresh_tpr": {
+      "0.001": 0.001,
+      "0.01": 0.010375,
+      "0.05": 0.05134375
+    },
+    "neg_control_auc": 0.4976421044921875,
+    "pos_control_auc": 0.537334,
+    "pos_control_fit": 0.55,
+    "train_acc": 0.664,
+    "test_acc": 0.608,
+    "gap": 0.05600000000000005
+  },
+  "librispeech_16q|poly|42": {
+    "complete": true,
+    "tag": "librispeech_16q",
+    "kind": "poly",
+    "seed": 42,
+    "task": "clean_vs_other",
+    "lira_auc": 0.7287055830078126,
+    "lira_tpr": {
+      "0.001": 0.00084375,
+      "0.01": 0.03,
+      "0.05": 0.16771875
+    },
+    "thresh_auc": 0.6546338076171875,
+    "thresh_tpr": {
+      "0.001": 0.001,
+      "0.01": 0.0098125,
+      "0.05": 0.048375
+    },
+    "neg_control_auc": 0.507667576171875,
+    "pos_control_auc": 0.730195625,
+    "pos_control_fit": 1.0,
+    "train_acc": 1.0,
+    "test_acc": 0.564,
+    "gap": 0.43600000000000005
+  },
+  "librispeech_16q|rbf|42": {
+    "complete": true,
+    "tag": "librispeech_16q",
+    "kind": "rbf",
+    "seed": 42,
+    "task": "clean_vs_other",
+    "lira_auc": 0.7780876152343751,
+    "lira_tpr": {
+      "0.001": 0.0433125,
+      "0.01": 0.12759375,
+      "0.05": 0.29121875
+    },
+    "thresh_auc": 0.655407373046875,
+    "thresh_tpr": {
+      "0.001": 0.0010625,
+      "0.01": 0.0093125,
+      "0.05": 0.0494375
+    },
+    "neg_control_auc": 0.499364140625,
+    "pos_control_auc": 0.9151986250000002,
+    "pos_control_fit": 1.0,
+    "train_acc": 0.8,
+    "test_acc": 0.544,
+    "gap": 0.256
+  },
+  "librispeech_16q|quantum|123": {
+    "complete": true,
+    "tag": "librispeech_16q",
+    "kind": "quantum",
+    "seed": 123,
+    "task": "clean_vs_other",
+    "lira_auc": 0.9992379990234376,
+    "lira_tpr": {
+      "0.001": 0.922125,
+      "0.01": 0.98375,
+      "0.05": 0.997625
+    },
+    "thresh_auc": 0.9886543310546875,
+    "thresh_tpr": {
+      "0.001": 0.00134375,
+      "0.01": 0.8438125,
+      "0.05": 0.97203125
+    },
+    "neg_control_auc": 0.5006049287109375,
+    "pos_control_auc": 0.9999963125,
+    "pos_control_fit": 1.0,
+    "train_acc": 1.0,
+    "test_acc": 0.556,
+    "gap": 0.44399999999999995
+  },
+  "librispeech_16q|linear|123": {
+    "complete": true,
+    "tag": "librispeech_16q",
+    "kind": "linear",
+    "seed": 123,
+    "task": "clean_vs_other",
+    "lira_auc": 0.5827238466796876,
+    "lira_tpr": {
+      "0.001": 0.00084375,
+      "0.01": 0.016625,
+      "0.05": 0.081875
+    },
+    "thresh_auc": 0.5410724882812501,
+    "thresh_tpr": {
+      "0.001": 0.00109375,
+      "0.01": 0.01025,
+      "0.05": 0.0514375
+    },
+    "neg_control_auc": 0.5004216630859375,
+    "pos_control_auc": 0.5462564999999999,
+    "pos_control_fit": 0.586,
+    "train_acc": 0.7,
+    "test_acc": 0.644,
+    "gap": 0.05599999999999994
+  },
+  "librispeech_16q|poly|123": {
+    "complete": true,
+    "tag": "librispeech_16q",
+    "kind": "poly",
+    "seed": 123,
+    "task": "clean_vs_other",
+    "lira_auc": 0.7241163857421875,
+    "lira_tpr": {
+      "0.001": 0.00828125,
+      "0.01": 0.0290625,
+      "0.05": 0.15071875
+    },
+    "thresh_auc": 0.6613995654296875,
+    "thresh_tpr": {
+      "0.001": 0.0009375,
+      "0.01": 0.01046875,
+      "0.05": 0.051
+    },
+    "neg_control_auc": 0.5000560087890624,
+    "pos_control_auc": 0.7559842499999999,
+    "pos_control_fit": 1.0,
+    "train_acc": 1.0,
+    "test_acc": 0.536,
+    "gap": 0.46399999999999997
+  },
+  "librispeech_16q|rbf|123": {
+    "complete": true,
+    "tag": "librispeech_16q",
+    "kind": "rbf",
+    "seed": 123,
+    "task": "clean_vs_other",
+    "lira_auc": 0.7847865107421875,
+    "lira_tpr": {
+      "0.001": 0.04784375,
+      "0.01": 0.13546875,
+      "0.05": 0.298625
+    },
+    "thresh_auc": 0.6543196835937499,
+    "thresh_tpr": {
+      "0.001": 0.0010625,
+      "0.01": 0.0099375,
+      "0.05": 0.0508125
+    },
+    "neg_control_auc": 0.501350265625,
+    "pos_control_auc": 0.9229186875000001,
+    "pos_control_fit": 1.0,
+    "train_acc": 0.816,
+    "test_acc": 0.62,
+    "gap": 0.19599999999999995
+  },
+  "librispeech_16q|quantum|2024": {
+    "complete": true,
+    "tag": "librispeech_16q",
+    "kind": "quantum",
+    "seed": 2024,
+    "task": "clean_vs_other",
+    "lira_auc": 0.9981290576171875,
+    "lira_tpr": {
+      "0.001": 0.8553125,
+      "0.01": 0.9655625,
+      "0.05": 0.9920625
+    },
+    "thresh_auc": 0.9825361699218751,
+    "thresh_tpr": {
+      "0.001": 0.00090625,
+      "0.01": 0.80290625,
+      "0.05": 0.94734375
+    },
+    "neg_control_auc": 0.4979717314453125,
+    "pos_control_auc": 0.9999875,
+    "pos_control_fit": 1.0,
+    "train_acc": 0.988,
+    "test_acc": 0.584,
+    "gap": 0.404
+  },
+  "librispeech_16q|linear|2024": {
+    "complete": true,
+    "tag": "librispeech_16q",
+    "kind": "linear",
+    "seed": 2024,
+    "task": "clean_vs_other",
+    "lira_auc": 0.5841050859375,
+    "lira_tpr": {
+      "0.001": 0.0024375,
+      "0.01": 0.01871875,
+      "0.05": 0.090875
+    },
+    "thresh_auc": 0.5392981689453125,
+    "thresh_tpr": {
+      "0.001": 0.00121875,
+      "0.01": 0.00934375,
+      "0.05": 0.04896875
+    },
+    "neg_control_auc": 0.4971327880859375,
+    "pos_control_auc": 0.5434839375,
+    "pos_control_fit": 0.6,
+    "train_acc": 0.7,
+    "test_acc": 0.592,
+    "gap": 0.10799999999999998
+  },
+  "librispeech_16q|poly|2024": {
+    "complete": true,
+    "tag": "librispeech_16q",
+    "kind": "poly",
+    "seed": 2024,
+    "task": "clean_vs_other",
+    "lira_auc": 0.7300984091796875,
+    "lira_tpr": {
+      "0.001": 0.00315625,
+      "0.01": 0.0391875,
+      "0.05": 0.1600625
+    },
+    "thresh_auc": 0.65174155859375,
+    "thresh_tpr": {
+      "0.001": 0.001,
+      "0.01": 0.009,
+      "0.05": 0.04759375
+    },
+    "neg_control_auc": 0.4988398466796875,
+    "pos_control_auc": 0.721435375,
+    "pos_control_fit": 1.0,
+    "train_acc": 1.0,
+    "test_acc": 0.564,
+    "gap": 0.43600000000000005
+  },
+  "librispeech_16q|rbf|2024": {
+    "complete": true,
+    "tag": "librispeech_16q",
+    "kind": "rbf",
+    "seed": 2024,
+    "task": "clean_vs_other",
+    "lira_auc": 0.783905361328125,
+    "lira_tpr": {
+      "0.001": 0.0479375,
+      "0.01": 0.13134375,
+      "0.05": 0.284875
+    },
+    "thresh_auc": 0.6558554306640625,
+    "thresh_tpr": {
+      "0.001": 0.00175,
+      "0.01": 0.011625,
+      "0.05": 0.0500625
+    },
+    "neg_control_auc": 0.49627104492187496,
+    "pos_control_auc": 0.9050913125,
+    "pos_control_fit": 1.0,
+    "train_acc": 0.804,
+    "test_acc": 0.612,
+    "gap": 0.19200000000000006
+  }
+}

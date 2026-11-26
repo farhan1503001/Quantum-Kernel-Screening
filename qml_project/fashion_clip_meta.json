@@ -1,0 +1,22 @@
+{
+  "dataset": "fashion_mnist_binary",
+  "classes": "tshirt_vs_sneaker",
+  "encoder": "clip",
+  "embedding_type": "clip_512",
+  "n_classes": 2,
+  "metric": "binary",
+  "baselines": {
+    "Linear": {
+      "accuracy": 1.0,
+      "f1": 1.0
+    },
+    "RBF": {
+      "accuracy": 1.0,
+      "f1": 1.0
+    },
+    "Polynomial": {
+      "accuracy": 1.0,
+      "f1": 1.0
+    }
+  }
+}

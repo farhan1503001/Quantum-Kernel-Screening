@@ -1,0 +1,122 @@
+{
+ "ag_news": {
+  "status": "SKIP",
+  "reason": "No exact-split raw NPZ for ag_news; set RAW_FILES or export original raw rows"
+ },
+ "agnews_minilm": {
+  "status": "SKIP",
+  "reason": "/content/drive/MyDrive/qml_project/agnews_minilm_raw.npz: missing raw arrays"
+ },
+ "agnews_roberta": {
+  "status": "SKIP",
+  "reason": "/content/drive/MyDrive/qml_project/agnews_roberta_seed42_raw.npz: missing raw arrays"
+ },
+ "cifar10": {
+  "status": "SKIP",
+  "reason": "/content/drive/MyDrive/qml_project/cifar10_seed42_raw.npz: missing raw arrays"
+ },
+ "fashion_clip": {
+  "status": "SKIP",
+  "reason": "/content/drive/MyDrive/qml_project/fashion_clip_raw.npz: missing raw arrays"
+ },
+ "fashion_dinov2": {
+  "status": "SKIP",
+  "reason": "/content/drive/MyDrive/qml_project/fashion_dinov2_raw.npz: missing raw arrays"
+ },
+ "mscoco": {
+  "status": "SKIP",
+  "reason": "/content/drive/MyDrive/qml_project/mscoco_raw.npz: missing raw arrays"
+ },
+ "mscoco_siglip": {
+  "status": "SKIP",
+  "reason": "/content/drive/MyDrive/qml_project/mscoco_siglip_raw.npz: missing raw arrays"
+ },
+ "multiling_mbert_arabic": {
+  "status": "SKIP",
+  "reason": "No exact-split raw NPZ for multiling_mbert_arabic; set RAW_FILES or export original raw rows"
+ },
+ "multiling_mbert_chinese": {
+  "status": "SKIP",
+  "reason": "No exact-split raw NPZ for multiling_mbert_chinese; set RAW_FILES or export original raw rows"
+ },
+ "multiling_mbert_english": {
+  "status": "SKIP",
+  "reason": "No exact-split raw NPZ for multiling_mbert_english; set RAW_FILES or export original raw rows"
+ },
+ "multiling_mbert_german": {
+  "status": "SKIP",
+  "reason": "No exact-split raw NPZ for multiling_mbert_german; set RAW_FILES or export original raw rows"
+ },
+ "multiling_mbert_hindi": {
+  "status": "SKIP",
+  "reason": "No exact-split raw NPZ for multiling_mbert_hindi; set RAW_FILES or export original raw rows"
+ },
+ "multiling_mbert_spanish": {
+  "status": "SKIP",
+  "reason": "No exact-split raw NPZ for multiling_mbert_spanish; set RAW_FILES or export original raw rows"
+ },
+ "multiling_xlmr_arabic": {
+  "status": "SKIP",
+  "reason": "No exact-split raw NPZ for multiling_xlmr_arabic; set RAW_FILES or export original raw rows"
+ },
+ "multiling_xlmr_chinese": {
+  "status": "SKIP",
+  "reason": "No exact-split raw NPZ for multiling_xlmr_chinese; set RAW_FILES or export original raw rows"
+ },
+ "multiling_xlmr_english": {
+  "status": "SKIP",
+  "reason": "No exact-split raw NPZ for multiling_xlmr_english; set RAW_FILES or export original raw rows"
+ },
+ "multiling_xlmr_german": {
+  "status": "SKIP",
+  "reason": "No exact-split raw NPZ for multiling_xlmr_german; set RAW_FILES or export original raw rows"
+ },
+ "multiling_xlmr_hindi": {
+  "status": "SKIP",
+  "reason": "No exact-split raw NPZ for multiling_xlmr_hindi; set RAW_FILES or export original raw rows"
+ },
+ "multiling_xlmr_spanish": {
+  "status": "SKIP",
+  "reason": "No exact-split raw NPZ for multiling_xlmr_spanish; set RAW_FILES or export original raw rows"
+ },
+ "snlive": {
+  "status": "SKIP",
+  "reason": "/content/drive/MyDrive/qml_project/snlive_raw.npz: missing raw arrays"
+ },
+ "snlive_siglip": {
+  "status": "SKIP",
+  "reason": "/content/drive/MyDrive/qml_project/snlive_siglip_seed42_raw.npz: missing raw arrays"
+ },
+ "sst2_minilm": {
+  "status": "SKIP",
+  "reason": "/content/drive/MyDrive/qml_project/sst2_minilm_raw.npz: missing raw arrays"
+ },
+ "sst2_roberta": {
+  "status": "SKIP",
+  "reason": "/content/drive/MyDrive/qml_project/sst2_roberta_raw.npz: missing raw arrays"
+ },
+ "sst2_bert": {
+  "status": "SKIP",
+  "reason": "/content/drive/MyDrive/qml_project/sst2_bert_seed42_raw.npz: missing raw arrays"
+ },
+ "cifar10_dinov2": {
+  "status": "SKIP",
+  "reason": "/content/drive/MyDrive/qml_project/cifar10_dinov2_raw.npz: missing raw arrays"
+ },
+ "cifar10_vit": {
+  "status": "SKIP",
+  "reason": "No exact-split raw NPZ for cifar10_vit; set RAW_FILES or export original raw rows"
+ },
+ "fashion_vit": {
+  "status": "SKIP",
+  "reason": "/content/drive/MyDrive/qml_project/fashion_vit_seed42_raw.npz: missing raw arrays"
+ },
+ "snlive_flava": {
+  "status": "SKIP",
+  "reason": "No exact-split raw NPZ for snlive_flava; set RAW_FILES or export original raw rows"
+ },
+ "mscoco_flava": {
+  "status": "SKIP",
+  "reason": "/content/drive/MyDrive/qml_project/mscoco_flava_seed42_raw.npz: missing raw arrays"
+ }
+}

@@ -1,0 +1,39 @@
+{
+  "tag": "cifar10",
+  "seed": 7,
+  "domain": "vision",
+  "encoder": "CLIP",
+  "metric": "binary",
+  "n_qubits": 8,
+  "n_train": 1000,
+  "n_test": 200,
+  "quantum_accuracy": 0.99,
+  "quantum_f1": 0.9902912621359223,
+  "best_classical_f1": 1.0,
+  "best_classical_kernel": "Linear",
+  "gap": -0.009708737864077666,
+  "ci_lo": -0.02513200520368339,
+  "ci_hi": 0.0,
+  "excludes_zero": false,
+  "kta": 0.2712849600580111,
+  "c_kta": 0.7095762337076561,
+  "concentration": 0.2626503840680041,
+  "offdiag_quantum": 0.03814243119908195,
+  "offdiag_rbf": 0.5266538858413696,
+  "classical_baselines": {
+    "Linear": {
+      "accuracy": 1.0,
+      "f1": 1.0
+    },
+    "RBF": {
+      "accuracy": 0.99,
+      "f1": 0.9901960784313726
+    },
+    "Polynomial": {
+      "accuracy": 0.99,
+      "f1": 0.9903846153846154
+    }
+  },
+  "sklearn_version": "1.6.1",
+  "pipeline": "identical to seed-42 run; seed substituted for 42; embeddings from seeds_A_embeddings.ipynb"
+}

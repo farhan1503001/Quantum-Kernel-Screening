@@ -1,0 +1,14 @@
+,0
+main r (n=18),0.7827968849443995
+main Spearman,0.727188204741755
+all 30 r,0.41286067037550495
+six dataset means r,0.9749737908728308
+main without vision r (n=12),0.602006679168104
+all non-saturated r (n=24),0.22804973148150892
+LOO R2 (alignment),0.519971073901849
+"leave-one-dataset-out MAE, alignment",0.00915652292411338
+"leave-one-dataset-out MAE, constant",0.019576227958448884
+n flagged,8.0
+mean gap flagged,-0.030854657436127135
+mean gap unflagged,-0.004310476968019972
+max flagged gap,-0.0012656502029171346

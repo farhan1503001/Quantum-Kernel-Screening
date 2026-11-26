@@ -1,0 +1,52 @@
+{
+  "encoder": "mbert",
+  "model": "bert-base-multilingual-cased",
+  "languages": [
+    "chinese",
+    "hindi"
+  ],
+  "n_qubits": 8,
+  "metric": "macro",
+  "per_language": {
+    "chinese": {
+      "baselines": {
+        "Linear": {
+          "accuracy": 0.56,
+          "f1": 0.5586733476497255
+        },
+        "RBF": {
+          "accuracy": 0.55,
+          "f1": 0.5500509677080135
+        },
+        "Polynomial": {
+          "accuracy": 0.57,
+          "f1": 0.5734135902933857
+        }
+      },
+      "best_classical_f1": 0.5734135902933857,
+      "kta_classical": 0.05209071054743344,
+      "n_train": 1000,
+      "n_test": 200
+    },
+    "hindi": {
+      "baselines": {
+        "Linear": {
+          "accuracy": 0.4,
+          "f1": 0.3997396043264263
+        },
+        "RBF": {
+          "accuracy": 0.31,
+          "f1": 0.2996470759334294
+        },
+        "Polynomial": {
+          "accuracy": 0.29,
+          "f1": 0.28276623186671457
+        }
+      },
+      "best_classical_f1": 0.3997396043264263,
+      "kta_classical": 0.0042783338124228664,
+      "n_train": 1000,
+      "n_test": 200
+    }
+  }
+}

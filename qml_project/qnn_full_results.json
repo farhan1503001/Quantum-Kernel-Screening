@@ -1,0 +1,632 @@
+{
+  "sst2_bert|QNN|42": {
+    "complete": true,
+    "tag": "sst2_bert",
+    "mtype": "QNN",
+    "seed": 42,
+    "train_acc": 0.73,
+    "lira_auc": 0.5510701054687499,
+    "lira_tpr": {
+      "0.001": 0.00325,
+      "0.01": 0.021875,
+      "0.05": 0.0776875
+    },
+    "thresh_auc": 0.5329057055664063,
+    "thresh_tpr": {
+      "0.001": 0.00125,
+      "0.01": 0.0116875,
+      "0.05": 0.0590625
+    },
+    "neg_control_auc": 0.5022075703125,
+    "heldout_acc": 0.728
+  },
+  "sst2_bert|ClassicalNN|42": {
+    "complete": true,
+    "tag": "sst2_bert",
+    "mtype": "ClassicalNN",
+    "seed": 42,
+    "train_acc": 0.75,
+    "lira_auc": 0.5369717333984375,
+    "lira_tpr": {
+      "0.001": 0.0016875,
+      "0.01": 0.01440625,
+      "0.05": 0.0675
+    },
+    "thresh_auc": 0.521043416015625,
+    "thresh_tpr": {
+      "0.001": 0.0011875,
+      "0.01": 0.01115625,
+      "0.05": 0.05296875
+    },
+    "neg_control_auc": 0.49619403417968755,
+    "heldout_acc": 0.484
+  },
+  "agnews_bert|QNN|42": {
+    "complete": true,
+    "tag": "agnews_bert",
+    "mtype": "QNN",
+    "seed": 42,
+    "train_acc": 0.934,
+    "lira_auc": 0.5359290947265625,
+    "lira_tpr": {
+      "0.001": 0.0056875,
+      "0.01": 0.0255625,
+      "0.05": 0.07375
+    },
+    "thresh_auc": 0.5141970043945312,
+    "thresh_tpr": {
+      "0.001": 0.00121875,
+      "0.01": 0.00965625,
+      "0.05": 0.05240625
+    },
+    "neg_control_auc": 0.50369664453125,
+    "heldout_acc": 0.924
+  },
+  "agnews_bert|ClassicalNN|42": {
+    "complete": true,
+    "tag": "agnews_bert",
+    "mtype": "ClassicalNN",
+    "seed": 42,
+    "train_acc": 0.95,
+    "lira_auc": 0.5278891591796875,
+    "lira_tpr": {
+      "0.001": 0.00125,
+      "0.01": 0.0125,
+      "0.05": 0.05940625
+    },
+    "thresh_auc": 0.5064489555664062,
+    "thresh_tpr": {
+      "0.001": 0.00109375,
+      "0.01": 0.01178125,
+      "0.05": 0.05421875
+    },
+    "neg_control_auc": 0.49859164404296874,
+    "heldout_acc": 0.912
+  },
+  "cifar10_clip|QNN|42": {
+    "complete": true,
+    "tag": "cifar10_clip",
+    "mtype": "QNN",
+    "seed": 42,
+    "train_acc": 1.0,
+    "lira_auc": 0.5112304658203125,
+    "lira_tpr": {
+      "0.001": 0.0055,
+      "0.01": 0.01353125,
+      "0.05": 0.0520625
+    },
+    "thresh_auc": 0.5017545405273437,
+    "thresh_tpr": {
+      "0.001": 0.0008125,
+      "0.01": 0.01034375,
+      "0.05": 0.04878125
+    },
+    "neg_control_auc": 0.5021943032226562,
+    "heldout_acc": 0.996
+  },
+  "cifar10_clip|ClassicalNN|42": {
+    "complete": true,
+    "tag": "cifar10_clip",
+    "mtype": "ClassicalNN",
+    "seed": 42,
+    "train_acc": 0.998,
+    "lira_auc": 0.5086517861328125,
+    "lira_tpr": {
+      "0.001": 0.0040625,
+      "0.01": 0.01203125,
+      "0.05": 0.0525625
+    },
+    "thresh_auc": 0.4996369404296875,
+    "thresh_tpr": {
+      "0.001": 0.001125,
+      "0.01": 0.0095,
+      "0.05": 0.05025
+    },
+    "neg_control_auc": 0.5002776992187501,
+    "heldout_acc": 0.996
+  },
+  "fashion_mnist_clip|QNN|42": {
+    "complete": true,
+    "tag": "fashion_mnist_clip",
+    "mtype": "QNN",
+    "seed": 42,
+    "train_acc": 1.0,
+    "lira_auc": 0.508989765625,
+    "lira_tpr": {
+      "0.001": 0.0024375,
+      "0.01": 0.0145625,
+      "0.05": 0.056125
+    },
+    "thresh_auc": 0.5033202900390625,
+    "thresh_tpr": {
+      "0.001": 0.0008125,
+      "0.01": 0.00975,
+      "0.05": 0.0486875
+    },
+    "neg_control_auc": 0.49994725195312495,
+    "heldout_acc": 1.0
+  },
+  "fashion_mnist_clip|ClassicalNN|42": {
+    "complete": true,
+    "tag": "fashion_mnist_clip",
+    "mtype": "ClassicalNN",
+    "seed": 42,
+    "train_acc": 1.0,
+    "lira_auc": 0.5119259365234375,
+    "lira_tpr": {
+      "0.001": 0.0010625,
+      "0.01": 0.011125,
+      "0.05": 0.0555625
+    },
+    "thresh_auc": 0.5004349956054688,
+    "thresh_tpr": {
+      "0.001": 0.00103125,
+      "0.01": 0.009625,
+      "0.05": 0.0509375
+    },
+    "neg_control_auc": 0.49939575537109376,
+    "heldout_acc": 1.0
+  },
+  "mnist_01|QNN|42": {
+    "complete": true,
+    "tag": "mnist_01",
+    "mtype": "QNN",
+    "seed": 42,
+    "train_acc": 0.998,
+    "lira_auc": 0.509072865234375,
+    "lira_tpr": {
+      "0.001": 0.0034375,
+      "0.01": 0.01415625,
+      "0.05": 0.05340625
+    },
+    "thresh_auc": 0.5030487534179687,
+    "thresh_tpr": {
+      "0.001": 0.00125,
+      "0.01": 0.01134375,
+      "0.05": 0.05134375
+    },
+    "neg_control_auc": 0.499091728515625,
+    "heldout_acc": 0.996
+  },
+  "mnist_01|ClassicalNN|42": {
+    "complete": true,
+    "tag": "mnist_01",
+    "mtype": "ClassicalNN",
+    "seed": 42,
+    "train_acc": 0.97,
+    "lira_auc": 0.5137042099609375,
+    "lira_tpr": {
+      "0.001": 0.00284375,
+      "0.01": 0.01471875,
+      "0.05": 0.05940625
+    },
+    "thresh_auc": 0.4977326767578125,
+    "thresh_tpr": {
+      "0.001": 0.0011875,
+      "0.01": 0.01090625,
+      "0.05": 0.05325
+    },
+    "neg_control_auc": 0.4991041586914063,
+    "heldout_acc": 0.996
+  },
+  "sst2_bert|QNN|123": {
+    "complete": true,
+    "tag": "sst2_bert",
+    "mtype": "QNN",
+    "seed": 123,
+    "train_acc": 0.758,
+    "lira_auc": 0.5530091318359375,
+    "lira_tpr": {
+      "0.001": 0.00346875,
+      "0.01": 0.0215625,
+      "0.05": 0.07721875
+    },
+    "thresh_auc": 0.5302033095703125,
+    "thresh_tpr": {
+      "0.001": 0.00175,
+      "0.01": 0.01296875,
+      "0.05": 0.05946875
+    },
+    "neg_control_auc": 0.500467234375,
+    "heldout_acc": 0.756
+  },
+  "sst2_bert|ClassicalNN|123": {
+    "complete": true,
+    "tag": "sst2_bert",
+    "mtype": "ClassicalNN",
+    "seed": 123,
+    "train_acc": 0.694,
+    "lira_auc": 0.538847873046875,
+    "lira_tpr": {
+      "0.001": 0.002,
+      "0.01": 0.01584375,
+      "0.05": 0.0673125
+    },
+    "thresh_auc": 0.5198504677734375,
+    "thresh_tpr": {
+      "0.001": 0.00090625,
+      "0.01": 0.0109375,
+      "0.05": 0.0524375
+    },
+    "neg_control_auc": 0.5020746005859376,
+    "heldout_acc": 0.768
+  },
+  "agnews_bert|QNN|123": {
+    "complete": true,
+    "tag": "agnews_bert",
+    "mtype": "QNN",
+    "seed": 123,
+    "train_acc": 0.93,
+    "lira_auc": 0.536113658203125,
+    "lira_tpr": {
+      "0.001": 0.00653125,
+      "0.01": 0.024375,
+      "0.05": 0.076
+    },
+    "thresh_auc": 0.5176842529296874,
+    "thresh_tpr": {
+      "0.001": 0.00071875,
+      "0.01": 0.01065625,
+      "0.05": 0.0503125
+    },
+    "neg_control_auc": 0.499417296875,
+    "heldout_acc": 0.908
+  },
+  "agnews_bert|ClassicalNN|123": {
+    "complete": true,
+    "tag": "agnews_bert",
+    "mtype": "ClassicalNN",
+    "seed": 123,
+    "train_acc": 0.95,
+    "lira_auc": 0.5239948798828125,
+    "lira_tpr": {
+      "0.001": 0.00115625,
+      "0.01": 0.0138125,
+      "0.05": 0.06309375
+    },
+    "thresh_auc": 0.51154178515625,
+    "thresh_tpr": {
+      "0.001": 0.00128125,
+      "0.01": 0.01028125,
+      "0.05": 0.052
+    },
+    "neg_control_auc": 0.49714952441406257,
+    "heldout_acc": 0.912
+  },
+  "cifar10_clip|QNN|123": {
+    "complete": true,
+    "tag": "cifar10_clip",
+    "mtype": "QNN",
+    "seed": 123,
+    "train_acc": 1.0,
+    "lira_auc": 0.5118271552734375,
+    "lira_tpr": {
+      "0.001": 0.0054375,
+      "0.01": 0.01675,
+      "0.05": 0.057375
+    },
+    "thresh_auc": 0.5014758862304687,
+    "thresh_tpr": {
+      "0.001": 0.00096875,
+      "0.01": 0.0106875,
+      "0.05": 0.048875
+    },
+    "neg_control_auc": 0.4989744072265625,
+    "heldout_acc": 0.996
+  },
+  "cifar10_clip|ClassicalNN|123": {
+    "complete": true,
+    "tag": "cifar10_clip",
+    "mtype": "ClassicalNN",
+    "seed": 123,
+    "train_acc": 1.0,
+    "lira_auc": 0.5096123232421875,
+    "lira_tpr": {
+      "0.001": 0.0044375,
+      "0.01": 0.01425,
+      "0.05": 0.0600625
+    },
+    "thresh_auc": 0.5006115048828125,
+    "thresh_tpr": {
+      "0.001": 0.001125,
+      "0.01": 0.01,
+      "0.05": 0.05053125
+    },
+    "neg_control_auc": 0.49691903417968747,
+    "heldout_acc": 0.996
+  },
+  "fashion_mnist_clip|QNN|123": {
+    "complete": true,
+    "tag": "fashion_mnist_clip",
+    "mtype": "QNN",
+    "seed": 123,
+    "train_acc": 1.0,
+    "lira_auc": 0.51061384375,
+    "lira_tpr": {
+      "0.001": 0.00340625,
+      "0.01": 0.014,
+      "0.05": 0.0568125
+    },
+    "thresh_auc": 0.507026337890625,
+    "thresh_tpr": {
+      "0.001": 0.0011875,
+      "0.01": 0.011,
+      "0.05": 0.0520625
+    },
+    "neg_control_auc": 0.5004197431640626,
+    "heldout_acc": 1.0
+  },
+  "fashion_mnist_clip|ClassicalNN|123": {
+    "complete": true,
+    "tag": "fashion_mnist_clip",
+    "mtype": "ClassicalNN",
+    "seed": 123,
+    "train_acc": 1.0,
+    "lira_auc": 0.51293405078125,
+    "lira_tpr": {
+      "0.001": 0.0014375,
+      "0.01": 0.01290625,
+      "0.05": 0.0531875
+    },
+    "thresh_auc": 0.5011373930664063,
+    "thresh_tpr": {
+      "0.001": 0.00084375,
+      "0.01": 0.0105625,
+      "0.05": 0.04959375
+    },
+    "neg_control_auc": 0.5012368701171874,
+    "heldout_acc": 1.0
+  },
+  "mnist_01|QNN|123": {
+    "complete": true,
+    "tag": "mnist_01",
+    "mtype": "QNN",
+    "seed": 123,
+    "train_acc": 1.0,
+    "lira_auc": 0.5067777832031249,
+    "lira_tpr": {
+      "0.001": 0.002375,
+      "0.01": 0.01321875,
+      "0.05": 0.05621875
+    },
+    "thresh_auc": 0.504258361328125,
+    "thresh_tpr": {
+      "0.001": 0.001125,
+      "0.01": 0.0095,
+      "0.05": 0.0516875
+    },
+    "neg_control_auc": 0.4951748173828125,
+    "heldout_acc": 1.0
+  },
+  "mnist_01|ClassicalNN|123": {
+    "complete": true,
+    "tag": "mnist_01",
+    "mtype": "ClassicalNN",
+    "seed": 123,
+    "train_acc": 0.996,
+    "lira_auc": 0.5076619687499999,
+    "lira_tpr": {
+      "0.001": 0.0010625,
+      "0.01": 0.01221875,
+      "0.05": 0.0538125
+    },
+    "thresh_auc": 0.5029155141601562,
+    "thresh_tpr": {
+      "0.001": 0.00059375,
+      "0.01": 0.010625,
+      "0.05": 0.0544375
+    },
+    "neg_control_auc": 0.4999684765625,
+    "heldout_acc": 0.996
+  },
+  "sst2_bert|QNN|2024": {
+    "complete": true,
+    "tag": "sst2_bert",
+    "mtype": "QNN",
+    "seed": 2024,
+    "train_acc": 0.692,
+    "lira_auc": 0.546238615234375,
+    "lira_tpr": {
+      "0.001": 0.00409375,
+      "0.01": 0.02103125,
+      "0.05": 0.0773125
+    },
+    "thresh_auc": 0.5341738125000001,
+    "thresh_tpr": {
+      "0.001": 0.0015625,
+      "0.01": 0.01234375,
+      "0.05": 0.0598125
+    },
+    "neg_control_auc": 0.49652333203125,
+    "heldout_acc": 0.688
+  },
+  "sst2_bert|ClassicalNN|2024": {
+    "complete": true,
+    "tag": "sst2_bert",
+    "mtype": "ClassicalNN",
+    "seed": 2024,
+    "train_acc": 0.672,
+    "lira_auc": 0.5382513017578126,
+    "lira_tpr": {
+      "0.001": 0.00196875,
+      "0.01": 0.01446875,
+      "0.05": 0.06534375
+    },
+    "thresh_auc": 0.5237017250976563,
+    "thresh_tpr": {
+      "0.001": 0.0009375,
+      "0.01": 0.01028125,
+      "0.05": 0.05378125
+    },
+    "neg_control_auc": 0.503006078125,
+    "heldout_acc": 0.7
+  },
+  "agnews_bert|QNN|2024": {
+    "complete": true,
+    "tag": "agnews_bert",
+    "mtype": "QNN",
+    "seed": 2024,
+    "train_acc": 0.936,
+    "lira_auc": 0.532660494140625,
+    "lira_tpr": {
+      "0.001": 0.00890625,
+      "0.01": 0.02553125,
+      "0.05": 0.0725
+    },
+    "thresh_auc": 0.5112640087890625,
+    "thresh_tpr": {
+      "0.001": 0.00090625,
+      "0.01": 0.01028125,
+      "0.05": 0.049375
+    },
+    "neg_control_auc": 0.4980436396484375,
+    "heldout_acc": 0.94
+  },
+  "agnews_bert|ClassicalNN|2024": {
+    "complete": true,
+    "tag": "agnews_bert",
+    "mtype": "ClassicalNN",
+    "seed": 2024,
+    "train_acc": 0.936,
+    "lira_auc": 0.5242210947265625,
+    "lira_tpr": {
+      "0.001": 0.0009375,
+      "0.01": 0.012125,
+      "0.05": 0.0615625
+    },
+    "thresh_auc": 0.504839029296875,
+    "thresh_tpr": {
+      "0.001": 0.00071875,
+      "0.01": 0.0104375,
+      "0.05": 0.05078125
+    },
+    "neg_control_auc": 0.4967817509765625,
+    "heldout_acc": 0.932
+  },
+  "cifar10_clip|QNN|2024": {
+    "complete": true,
+    "tag": "cifar10_clip",
+    "mtype": "QNN",
+    "seed": 2024,
+    "train_acc": 1.0,
+    "lira_auc": 0.517440291015625,
+    "lira_tpr": {
+      "0.001": 0.005875,
+      "0.01": 0.0168125,
+      "0.05": 0.05940625
+    },
+    "thresh_auc": 0.5052294921875,
+    "thresh_tpr": {
+      "0.001": 0.001,
+      "0.01": 0.0085625,
+      "0.05": 0.049125
+    },
+    "neg_control_auc": 0.4973746455078125,
+    "heldout_acc": 1.0
+  },
+  "cifar10_clip|ClassicalNN|2024": {
+    "complete": true,
+    "tag": "cifar10_clip",
+    "mtype": "ClassicalNN",
+    "seed": 2024,
+    "train_acc": 0.996,
+    "lira_auc": 0.5120994492187501,
+    "lira_tpr": {
+      "0.001": 0.00509375,
+      "0.01": 0.0155,
+      "0.05": 0.0570625
+    },
+    "thresh_auc": 0.5022237949218751,
+    "thresh_tpr": {
+      "0.001": 0.0005,
+      "0.01": 0.009625,
+      "0.05": 0.04975
+    },
+    "neg_control_auc": 0.49912602148437496,
+    "heldout_acc": 1.0
+  },
+  "fashion_mnist_clip|QNN|2024": {
+    "complete": true,
+    "tag": "fashion_mnist_clip",
+    "mtype": "QNN",
+    "seed": 2024,
+    "train_acc": 1.0,
+    "lira_auc": 0.5134688662109375,
+    "lira_tpr": {
+      "0.001": 0.00434375,
+      "0.01": 0.0151875,
+      "0.05": 0.05734375
+    },
+    "thresh_auc": 0.5040101425781249,
+    "thresh_tpr": {
+      "0.001": 0.0011875,
+      "0.01": 0.0108125,
+      "0.05": 0.049875
+    },
+    "neg_control_auc": 0.4990997851562501,
+    "heldout_acc": 1.0
+  },
+  "fashion_mnist_clip|ClassicalNN|2024": {
+    "complete": true,
+    "tag": "fashion_mnist_clip",
+    "mtype": "ClassicalNN",
+    "seed": 2024,
+    "train_acc": 1.0,
+    "lira_auc": 0.518858501953125,
+    "lira_tpr": {
+      "0.001": 0.0015625,
+      "0.01": 0.01484375,
+      "0.05": 0.058375
+    },
+    "thresh_auc": 0.503489998046875,
+    "thresh_tpr": {
+      "0.001": 0.000875,
+      "0.01": 0.01034375,
+      "0.05": 0.05359375
+    },
+    "neg_control_auc": 0.5003148808593749,
+    "heldout_acc": 1.0
+  },
+  "mnist_01|QNN|2024": {
+    "complete": true,
+    "tag": "mnist_01",
+    "mtype": "QNN",
+    "seed": 2024,
+    "train_acc": 1.0,
+    "lira_auc": 0.5074546064453125,
+    "lira_tpr": {
+      "0.001": 0.0018125,
+      "0.01": 0.0133125,
+      "0.05": 0.0554375
+    },
+    "thresh_auc": 0.5036826508789063,
+    "thresh_tpr": {
+      "0.001": 0.00121875,
+      "0.01": 0.0106875,
+      "0.05": 0.05009375
+    },
+    "neg_control_auc": 0.503924328125,
+    "heldout_acc": 1.0
+  },
+  "mnist_01|ClassicalNN|2024": {
+    "complete": true,
+    "tag": "mnist_01",
+    "mtype": "ClassicalNN",
+    "seed": 2024,
+    "train_acc": 1.0,
+    "lira_auc": 0.5062990771484375,
+    "lira_tpr": {
+      "0.001": 0.0006875,
+      "0.01": 0.00984375,
+      "0.05": 0.0505625
+    },
+    "thresh_auc": 0.5026730195312501,
+    "thresh_tpr": {
+      "0.001": 0.00109375,
+      "0.01": 0.00940625,
+      "0.05": 0.04765625
+    },
+    "neg_control_auc": 0.5016894506835938,
+    "heldout_acc": 1.0
+  }
+}

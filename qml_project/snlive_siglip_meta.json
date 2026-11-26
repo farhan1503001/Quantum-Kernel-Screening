@@ -1,0 +1,21 @@
+{
+  "dataset": "snlive",
+  "encoder": "siglip",
+  "embedding_type": "siglip_joint_1536",
+  "n_classes": 3,
+  "metric": "macro",
+  "baselines": {
+    "Linear": {
+      "accuracy": 0.32,
+      "f1": 0.23166248955722643
+    },
+    "RBF": {
+      "accuracy": 0.345,
+      "f1": 0.2858170484033718
+    },
+    "Polynomial": {
+      "accuracy": 0.37,
+      "f1": 0.29500090696387526
+    }
+  }
+}

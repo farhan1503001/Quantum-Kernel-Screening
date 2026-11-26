@@ -1,0 +1,70 @@
+{
+  "dataset": "sst2",
+  "encoder": "minilm",
+  "n_classes": 2,
+  "metric": "binary",
+  "N_ABL": 1000,
+  "feature_map_ablation": {
+    "IQP 1L": {
+      "accuracy": 0.725,
+      "f1": 0.7342995169082126,
+      "reused": true
+    },
+    "Angle": {
+      "accuracy": 0.79,
+      "f1": 0.7920792079207921
+    },
+    "IQP 2L": {
+      "accuracy": 0.695,
+      "f1": 0.7024390243902439
+    }
+  },
+  "qubit_ablation": {
+    "8": {
+      "accuracy": 0.725,
+      "f1": 0.7342995169082126,
+      "reused": true
+    },
+    "4": {
+      "accuracy": 0.74,
+      "f1": 0.7570093457943925
+    }
+  },
+  "c_sweep": {
+    "0.1": {
+      "accuracy": 0.51,
+      "f1": 0.6754966887417219
+    },
+    "0.5": {
+      "accuracy": 0.71,
+      "f1": 0.7433628318584071
+    },
+    "1.0": {
+      "accuracy": 0.69,
+      "f1": 0.7075471698113207
+    },
+    "5.0": {
+      "accuracy": 0.625,
+      "f1": 0.6231155778894473
+    },
+    "10.0": {
+      "accuracy": 0.63,
+      "f1": 0.63
+    }
+  },
+  "best_C": 0.5,
+  "classical_baselines": {
+    "Linear": {
+      "accuracy": 0.76,
+      "f1": 0.7735849056603774
+    },
+    "RBF": {
+      "accuracy": 0.775,
+      "f1": 0.7804878048780488
+    },
+    "Polynomial": {
+      "accuracy": 0.78,
+      "f1": 0.78
+    }
+  }
+}

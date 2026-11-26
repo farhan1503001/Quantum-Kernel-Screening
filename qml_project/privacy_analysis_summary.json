@@ -1,0 +1,24 @@
+{
+  "baseline_summary": {
+    "quantum_mean_auc": 0.6653534999999999,
+    "classical_mean_aucs": {
+      "Linear": 0.5317175,
+      "RBF": 0.5468148333333335,
+      "Poly": 0.5461331666666667
+    },
+    "significant_leak_configs": [
+      "sst2_bert",
+      "cifar10_clip",
+      "agnews_bert",
+      "sst2_roberta",
+      "sst2_minilm",
+      "cifar10_dinov2",
+      "fashion_mnist_clip",
+      "fashion_mnist_dinov2",
+      "agnews_roberta",
+      "agnews_minilm"
+    ],
+    "quantum_mean_f1_analytic": 0.8761075909218116
+  },
+  "notes": "Empirical MIA (margin/confidence/loss, best-attack). Not formal DP."
+}

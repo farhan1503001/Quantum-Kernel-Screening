@@ -1,0 +1,52 @@
+{
+  "encoder": "xlmr",
+  "model": "xlm-roberta-base",
+  "languages": [
+    "chinese",
+    "hindi"
+  ],
+  "n_qubits": 8,
+  "metric": "macro",
+  "per_language": {
+    "chinese": {
+      "baselines": {
+        "Linear": {
+          "accuracy": 0.7,
+          "f1": 0.7013336416897934
+        },
+        "RBF": {
+          "accuracy": 0.705,
+          "f1": 0.7065907719051872
+        },
+        "Polynomial": {
+          "accuracy": 0.675,
+          "f1": 0.6776067252137872
+        }
+      },
+      "best_classical_f1": 0.7065907719051872,
+      "kta_classical": 0.11754117000002573,
+      "n_train": 1000,
+      "n_test": 200
+    },
+    "hindi": {
+      "baselines": {
+        "Linear": {
+          "accuracy": 0.425,
+          "f1": 0.3589134589134589
+        },
+        "RBF": {
+          "accuracy": 0.42,
+          "f1": 0.35218990822135304
+        },
+        "Polynomial": {
+          "accuracy": 0.425,
+          "f1": 0.4161206228422462
+        }
+      },
+      "best_classical_f1": 0.4161206228422462,
+      "kta_classical": 0.003798046189766437,
+      "n_train": 1000,
+      "n_test": 200
+    }
+  }
+}

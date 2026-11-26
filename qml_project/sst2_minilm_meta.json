@@ -1,0 +1,24 @@
+{
+  "dataset": "sst2",
+  "encoder": "minilm",
+  "encoder_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "embedding_dim": 384,
+  "n_classes": 2,
+  "metric": "binary",
+  "n_train": 1000,
+  "n_test": 200,
+  "baselines": {
+    "Linear": {
+      "accuracy": 0.76,
+      "f1": 0.7735849056603774
+    },
+    "RBF": {
+      "accuracy": 0.775,
+      "f1": 0.7804878048780488
+    },
+    "Polynomial": {
+      "accuracy": 0.78,
+      "f1": 0.78
+    }
+  }
+}

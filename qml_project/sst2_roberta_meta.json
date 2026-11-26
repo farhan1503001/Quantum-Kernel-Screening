@@ -1,0 +1,24 @@
+{
+  "dataset": "sst2",
+  "encoder": "roberta",
+  "encoder_model": "roberta-base",
+  "embedding_dim": 768,
+  "n_classes": 2,
+  "metric": "binary",
+  "n_train": 1000,
+  "n_test": 200,
+  "baselines": {
+    "Linear": {
+      "accuracy": 0.555,
+      "f1": 0.6855123674911661
+    },
+    "RBF": {
+      "accuracy": 0.58,
+      "f1": 0.65
+    },
+    "Polynomial": {
+      "accuracy": 0.545,
+      "f1": 0.5727699530516432
+    }
+  }
+}

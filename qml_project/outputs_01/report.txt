@@ -1,0 +1,32 @@
+PRIMARY: macro-F1, CV-selected fixed classical baseline; all 30 configurations.
+   block          protocol  n  mean_gap  median_gap  pearson_r  n_flagged  n_flagged_negative  max_flagged_gap
+    main fixed CV-selected 18  -0.01611    -0.01219    0.78280          8                   8         -0.00127
+    main        both tuned 18   0.01044     0.00000   -0.26789          8                   2          0.14316
+held-out fixed CV-selected 12  -0.02104    -0.02268    0.00143          5                   3          0.03984
+held-out        both tuned 12  -0.00312    -0.00500    0.31118          5                   3          0.03912
+
+Conditional within-dataset permutation: r=0.78280, p=0.74243, permutations=10000
+
+Exact within-group permutation tests:
+   block       gap  pearson_r  exact_p_r  assignments  spearman  flagged_minus_unflagged  exact_p_diff
+    main fixed_gap    0.78280    0.74151        46656   0.72719                 -0.02654       0.66667
+    main tuned_gap   -0.26789    0.17816        46656  -0.42208                  0.01995       0.66667
+held-out fixed_gap    0.00143    0.98438           64   0.09790                  0.00482       0.75000
+held-out tuned_gap    0.31118    0.42188           64   0.39860                 -0.01172       0.50000
+
+Panel A on the primary protocol:
+main r (n=18)                           0.78280
+main Spearman                           0.72719
+all 30 r                                0.41286
+six dataset means r                     0.97497
+main without vision r (n=12)            0.60201
+all non-saturated r (n=24)              0.22805
+LOO R2 (alignment)                      0.51997
+leave-one-dataset-out MAE, alignment    0.00916
+leave-one-dataset-out MAE, constant     0.01958
+n flagged                               8.00000
+mean gap flagged                       -0.03085
+mean gap unflagged                     -0.00431
+max flagged gap                        -0.00127
+
+RETROSPECTIVE and ORIGINAL metric analyses are sensitivity only.

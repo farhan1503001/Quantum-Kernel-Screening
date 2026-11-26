@@ -1,0 +1,71 @@
+{
+  "N_ABL": 1000,
+  "feature_map_ablation": {
+    "IQP 1L": {
+      "accuracy": 0.605,
+      "f1": 0.6550218340611353,
+      "reused": true
+    },
+    "Angle": {
+      "accuracy": 0.665,
+      "f1": 0.6968325791855203
+    },
+    "IQP 2L": {
+      "accuracy": 0.625,
+      "f1": 0.6835443037974683
+    }
+  },
+  "qubit_ablation": {
+    "8": {
+      "accuracy": 0.605,
+      "f1": 0.6550218340611353,
+      "reused": true
+    },
+    "4": {
+      "accuracy": 0.52,
+      "f1": 0.6595744680851063
+    }
+  },
+  "c_sweep": {
+    "0.1": {
+      "accuracy": 0.51,
+      "f1": 0.6754966887417219
+    },
+    "0.5": {
+      "accuracy": 0.62,
+      "f1": 0.6545454545454545
+    },
+    "1.0": {
+      "accuracy": 0.635,
+      "f1": 0.6507177033492823
+    },
+    "5.0": {
+      "accuracy": 0.655,
+      "f1": 0.6666666666666666
+    },
+    "10.0": {
+      "accuracy": 0.625,
+      "f1": 0.6445497630331753
+    }
+  },
+  "best_C": 5.0,
+  "multi_seed": {
+    "ran": false,
+    "mean_accuracy": null,
+    "std_accuracy": null
+  },
+  "classical_baselines": {
+    "Linear": {
+      "accuracy": 0.68,
+      "f1": 0.7064220183486238
+    },
+    "RBF": {
+      "accuracy": 0.65,
+      "f1": 0.6929824561403509
+    },
+    "Polynomial": {
+      "accuracy": 0.675,
+      "f1": 0.6948356807511737
+    }
+  }
+}

@@ -1,0 +1,21 @@
+{
+  "dataset": "cifar10_binary",
+  "encoder": "dinov2",
+  "embedding_type": "dinov2_768",
+  "n_classes": 2,
+  "metric": "binary",
+  "baselines": {
+    "Linear": {
+      "accuracy": 0.995,
+      "f1": 0.9949238578680203
+    },
+    "RBF": {
+      "accuracy": 0.995,
+      "f1": 0.9949238578680203
+    },
+    "Polynomial": {
+      "accuracy": 0.99,
+      "f1": 0.98989898989899
+    }
+  }
+}

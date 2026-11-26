@@ -1,0 +1,39 @@
+{
+  "tag": "fashion_vit",
+  "seed": 123,
+  "domain": "vision",
+  "encoder": "ViT",
+  "metric": "binary",
+  "n_qubits": 8,
+  "n_train": 1000,
+  "n_test": 200,
+  "quantum_accuracy": 0.985,
+  "quantum_f1": 0.9849246231155779,
+  "best_classical_f1": 0.98989898989899,
+  "best_classical_kernel": "RBF",
+  "gap": -0.00497436678341201,
+  "ci_lo": -0.019407491310507917,
+  "ci_hi": 0.0,
+  "excludes_zero": false,
+  "kta": 0.2418646071651181,
+  "c_kta": 0.6268002761312614,
+  "concentration": 0.30255820125608357,
+  "offdiag_quantum": 0.025721439096614774,
+  "offdiag_rbf": 0.47858619689941406,
+  "classical_baselines": {
+    "Linear": {
+      "accuracy": 0.985,
+      "f1": 0.9849246231155779
+    },
+    "RBF": {
+      "accuracy": 0.99,
+      "f1": 0.98989898989899
+    },
+    "Polynomial": {
+      "accuracy": 0.99,
+      "f1": 0.98989898989899
+    }
+  },
+  "sklearn_version": "1.6.1",
+  "pipeline": "identical to seed-42 run; seed substituted for 42; embeddings from seeds_A_embeddings.ipynb"
+}

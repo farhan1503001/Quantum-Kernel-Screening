@@ -1,0 +1,21 @@
+block,protocol,metric,mean_gap,pearson_r
+main,fixed_retrospective,macro-F1,-0.02302529131796667,0.7932409265621106
+main,fixed_retrospective,original mixed metric,-0.023723499969139375,0.8731791637222474
+main,fixed_cv_selected,macro-F1,-0.016107890509400934,0.7827968849443995
+main,fixed_cv_selected,original mixed metric,-0.013543410491292568,0.414123762211989
+main,quantum_tuned_classical_fixed_cv,macro-F1,0.005526427623683849,-0.3209077032851854
+main,quantum_tuned_classical_fixed_cv,original mixed metric,0.006256061796663619,-0.26530275800301284
+main,quantum_fixed_classical_tuned,macro-F1,-0.01118936460032021,0.23983596343019392
+main,quantum_fixed_classical_tuned,original mixed metric,-0.006576005170571386,0.13457603988233782
+main,tuned,macro-F1,0.01044495353276457,-0.2678943852542939
+main,tuned,original mixed metric,0.0132234671173848,-0.3251282533758323
+held-out,fixed_retrospective,macro-F1,-0.036172613783978715,0.3475370576016759
+held-out,fixed_retrospective,original mixed metric,-0.036172613783978715,0.3475370576016759
+held-out,fixed_cv_selected,macro-F1,-0.02104003871821064,0.0014285710789198776
+held-out,fixed_cv_selected,original mixed metric,-0.02104003871821064,0.0014285710789198776
+held-out,quantum_tuned_classical_fixed_cv,macro-F1,-0.005691876000077006,0.17276702540201114
+held-out,quantum_tuned_classical_fixed_cv,original mixed metric,-0.005691876000077006,0.17276702540201114
+held-out,quantum_fixed_classical_tuned,macro-F1,-0.01847010872315945,0.07117897328355607
+held-out,quantum_fixed_classical_tuned,original mixed metric,-0.01847010872315945,0.07117897328355607
+held-out,tuned,macro-F1,-0.0031219460050258183,0.31118371069686607
+held-out,tuned,original mixed metric,-0.0031219460050258183,0.31118371069686607

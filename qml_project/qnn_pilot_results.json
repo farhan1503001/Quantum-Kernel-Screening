@@ -1,0 +1,16 @@
+{
+  "tag": "sst2_bert",
+  "n_qubits": 8,
+  "n_layers": 3,
+  "epochs": 40,
+  "target_accuracy": 0.732,
+  "sec_per_shadow": 87.7371768951416,
+  "M_validate": 16,
+  "lira_auc": 0.5412990625,
+  "tpr": {
+    "0.001": 0.0035,
+    "0.01": 0.01475,
+    "0.05": 0.06925
+  },
+  "negative_control_auc": 0.5050026875
+}

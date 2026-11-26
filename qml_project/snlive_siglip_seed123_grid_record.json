@@ -1,0 +1,39 @@
+{
+  "tag": "snlive_siglip",
+  "seed": 123,
+  "domain": "multimodal",
+  "encoder": "SigLIP",
+  "metric": "macro",
+  "n_qubits": 8,
+  "n_train": 1000,
+  "n_test": 200,
+  "quantum_accuracy": 0.275,
+  "quantum_f1": 0.21478458819308496,
+  "best_classical_f1": 0.28735353841108885,
+  "best_classical_kernel": "Polynomial",
+  "gap": -0.07256895021800389,
+  "ci_lo": -0.14864400932205726,
+  "ci_hi": -0.001889880760642505,
+  "excludes_zero": true,
+  "kta": 0.008320310058943358,
+  "c_kta": 0.003643676141215137,
+  "concentration": 0.1698190249165799,
+  "offdiag_quantum": 0.03476567691672149,
+  "offdiag_rbf": 0.5225232839584351,
+  "classical_baselines": {
+    "Linear": {
+      "accuracy": 0.31,
+      "f1": 0.27491994984689316
+    },
+    "RBF": {
+      "accuracy": 0.32,
+      "f1": 0.27649897994725575
+    },
+    "Polynomial": {
+      "accuracy": 0.345,
+      "f1": 0.28735353841108885
+    }
+  },
+  "sklearn_version": "1.6.1",
+  "pipeline": "identical to seed-42 run; seed substituted for 42; embeddings from seeds_A_embeddings.ipynb"
+}

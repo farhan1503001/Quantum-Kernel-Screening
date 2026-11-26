@@ -1,0 +1,24 @@
+{
+  "dataset": "agnews",
+  "encoder": "minilm",
+  "encoder_model": "sentence-transformers/all-MiniLM-L6-v2",
+  "embedding_dim": 384,
+  "n_classes": 4,
+  "metric": "macro",
+  "n_train": 1000,
+  "n_test": 200,
+  "baselines": {
+    "Linear": {
+      "accuracy": 0.83,
+      "f1": 0.8227637446458956
+    },
+    "RBF": {
+      "accuracy": 0.825,
+      "f1": 0.8182849502384694
+    },
+    "Polynomial": {
+      "accuracy": 0.815,
+      "f1": 0.8092337520220763
+    }
+  }
+}

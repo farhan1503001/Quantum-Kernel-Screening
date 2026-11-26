@@ -1,0 +1,68 @@
+{
+  "dataset": "fashion_mnist_binary",
+  "encoder": "dinov2",
+  "N_ABL": 1000,
+  "feature_map_ablation": {
+    "IQP 1L": {
+      "accuracy": 1.0,
+      "f1": 1.0,
+      "reused": true
+    },
+    "Angle": {
+      "accuracy": 1.0,
+      "f1": 1.0
+    },
+    "IQP 2L": {
+      "accuracy": 1.0,
+      "f1": 1.0
+    }
+  },
+  "qubit_ablation": {
+    "8": {
+      "accuracy": 1.0,
+      "f1": 1.0,
+      "reused": true
+    },
+    "4": {
+      "accuracy": 1.0,
+      "f1": 1.0
+    }
+  },
+  "c_sweep": {
+    "0.1": {
+      "accuracy": 0.995,
+      "f1": 0.9949748743718593
+    },
+    "0.5": {
+      "accuracy": 0.99,
+      "f1": 0.9897959183673469
+    },
+    "1.0": {
+      "accuracy": 1.0,
+      "f1": 1.0
+    },
+    "5.0": {
+      "accuracy": 1.0,
+      "f1": 1.0
+    },
+    "10.0": {
+      "accuracy": 1.0,
+      "f1": 1.0
+    }
+  },
+  "best_C": 1.0,
+  "classical_baselines": {
+    "Linear": {
+      "accuracy": 1.0,
+      "f1": 1.0
+    },
+    "RBF": {
+      "accuracy": 1.0,
+      "f1": 1.0
+    },
+    "Polynomial": {
+      "accuracy": 1.0,
+      "f1": 1.0
+    }
+  }
+}

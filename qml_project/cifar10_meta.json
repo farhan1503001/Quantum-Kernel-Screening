@@ -1,0 +1,28 @@
+{
+  "dataset": "cifar10_binary",
+  "classes": {
+    "0": "airplane",
+    "1": "automobile"
+  },
+  "n_classes": 2,
+  "encoder": "openai/clip-vit-base-patch32",
+  "embedding_dim": 512,
+  "n_train": 1000,
+  "n_test": 200,
+  "n_qubits": 8,
+  "metric": "f1_binary",
+  "baselines": {
+    "Linear": {
+      "accuracy": 0.995,
+      "f1": 0.9949748743718593
+    },
+    "RBF": {
+      "accuracy": 0.995,
+      "f1": 0.9949748743718593
+    },
+    "Polynomial": {
+      "accuracy": 0.995,
+      "f1": 0.9949748743718593
+    }
+  }
+}

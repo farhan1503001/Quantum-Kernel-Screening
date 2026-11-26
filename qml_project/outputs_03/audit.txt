@@ -1,0 +1,57 @@
+Exact v3 cached eight-dimensional features; full 30 configurations; fingerprint verified.
+Quantum Gram: original eight-qubit nearest-neighbor IQP statevector (not new circuits).
+Similarity: centered Frobenius normalized alignment on train Gram matrices.
+RBF reference: highest available training-CV RBF score; selection stage recorded.
+   block       alignment_reference  n  median_CKA_fixed  median_CKA_tuned  mean_CKA_fixed  mean_CKA_tuned  count_CKA_tuned_ge_095
+held-out CV-selected RBF bandwidth 12           0.54037           0.95149         0.56725         0.88718                       6
+held-out      Diagnostic RBF (1/d) 12           0.63612           0.96419         0.63057         0.86508                       7
+held-out                    Linear 12           0.53093           0.99810         0.52114         0.85538                       7
+held-out       Polynomial degree 3 12           0.47960           0.87686         0.49192         0.78143                       1
+    main CV-selected RBF bandwidth 18           0.53237           0.96192         0.54782         0.87592                      10
+    main      Diagnostic RBF (1/d) 18           0.56458           0.96023         0.57164         0.90635                      11
+    main                    Linear 18           0.46992           0.97603         0.47562         0.90069                      11
+    main       Polynomial degree 3 18           0.42646           0.88456         0.42768         0.82895                       0
+Near-constant centered norm (<1e-6): 0 configs.
+
+Analytic references, medians:
+                                     CKA  CKA_no_diagonal  max_abs_entry_diff  centered_norm_fraction
+phase reference                                                                                      
+fixed Linear                     0.49115          0.49347                 NaN                 0.81270
+      Matched RBF (gamma=s^2/4)  0.67268          0.66793             0.80819                 0.81270
+      Phase-feature RBF          0.99419          0.99362             0.24657                 0.81270
+tuned Linear                     0.99202          0.99197                 NaN                 0.02943
+      Matched RBF (gamma=s^2/4)  0.99219          0.99215             0.05990                 0.02943
+      Phase-feature RBF          0.99998          0.99998             0.00256                 0.02943
+
+Train-versus-test shift:
+                    tag    block       domain  train_vs_test_auc  auc_sd_over_seeds  max_class_share_difference  test_values_at_clip_boundary  train_values_at_boundary
+           sst2_roberta     main         text             0.9171             0.0005                       0.046                        0.0006                    0.0015
+              sst2_bert     main         text             0.9022             0.0004                       0.046                        0.0000                    0.0012
+ multiling_xlmr_english held-out multilingual             0.8202             0.0009                       0.012                        0.0000                    0.0016
+  multiling_xlmr_arabic held-out multilingual             0.7650             0.0010                       0.012                        0.0012                    0.0016
+ multiling_mbert_arabic held-out multilingual             0.7472             0.0027                       0.012                        0.0038                    0.0015
+            sst2_minilm     main         text             0.7272             0.0050                       0.046                        0.0006                    0.0015
+multiling_mbert_english held-out multilingual             0.7166             0.0041                       0.012                        0.0012                    0.0010
+                 snlive     main   multimodal             0.6493             0.0016                       0.041                        0.0000                    0.0011
+          snlive_siglip     main   multimodal             0.6483             0.0036                       0.041                        0.0006                    0.0018
+           snlive_flava     main   multimodal             0.6420             0.0039                       0.041                        0.0000                    0.0015
+                 mscoco     main   multimodal             0.5870             0.0083                       0.016                        0.0006                    0.0014
+           mscoco_flava     main   multimodal             0.5676             0.0097                       0.016                        0.0006                    0.0016
+         agnews_roberta     main         text             0.5565             0.0087                       0.055                        0.0019                    0.0016
+          mscoco_siglip     main   multimodal             0.5530             0.0090                       0.016                        0.0000                    0.0016
+ multiling_mbert_german held-out multilingual             0.5375             0.0046                       0.012                        0.0000                    0.0009
+ multiling_xlmr_spanish held-out multilingual             0.5247             0.0057                       0.012                        0.0006                    0.0012
+  multiling_xlmr_german held-out multilingual             0.5166             0.0214                       0.012                        0.0019                    0.0014
+         cifar10_dinov2     main       vision             0.5083             0.0116                       0.000                        0.0006                    0.0016
+multiling_mbert_chinese held-out multilingual             0.5081             0.0105                       0.025                        0.0006                    0.0011
+            cifar10_vit     main       vision             0.5026             0.0043                       0.000                        0.0012                    0.0015
+ multiling_xlmr_chinese held-out multilingual             0.5012             0.0076                       0.025                        0.0012                    0.0015
+                cifar10     main       vision             0.4971             0.0202                       0.005                        0.0019                    0.0012
+          agnews_minilm     main         text             0.4945             0.0124                       0.055                        0.0006                    0.0019
+multiling_mbert_spanish held-out multilingual             0.4916             0.0173                       0.012                        0.0012                    0.0009
+   multiling_xlmr_hindi held-out multilingual             0.4833             0.0206                       0.045                        0.0012                    0.0014
+                ag_news     main         text             0.4792             0.0133                       0.055                        0.0012                    0.0016
+         fashion_dinov2     main       vision             0.4708             0.0144                       0.000                        0.0019                    0.0016
+  multiling_mbert_hindi held-out multilingual             0.4576             0.0068                       0.045                        0.0000                    0.0016
+           fashion_clip     main       vision             0.4544             0.0161                       0.000                        0.0006                    0.0018
+            fashion_vit     main       vision             0.4526             0.0141                       0.000                        0.0012                    0.0016

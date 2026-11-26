@@ -1,0 +1,10 @@
+{
+  "QNN": {
+    "pos_control_auc": 0.8216796875,
+    "random_label_fit": 0.8916666666666667
+  },
+  "ClassicalNN": {
+    "pos_control_auc": 0.6328342013888889,
+    "random_label_fit": 0.55
+  }
+}

@@ -1,0 +1,61 @@
+{
+  "n_qubits": 8,
+  "n_train": 1000,
+  "n_test": 200,
+  "feature_map": "IQP (Hadamard + RZ + ZZ)",
+  "compute_time_min": 92.8,
+  "quantum_accuracy": 0.605,
+  "quantum_f1": 0.6550218340611353,
+  "all_results": {
+    "Linear": {
+      "accuracy": 0.68,
+      "f1": 0.7064220183486238
+    },
+    "RBF": {
+      "accuracy": 0.65,
+      "f1": 0.6929824561403509
+    },
+    "Polynomial": {
+      "accuracy": 0.675,
+      "f1": 0.6948356807511737
+    },
+    "Quantum (IQP)": {
+      "accuracy": 0.605,
+      "f1": 0.6550218340611353
+    }
+  },
+  "learning_curve_sizes": [
+    50,
+    100,
+    200,
+    400,
+    700,
+    1000
+  ],
+  "learning_curve_results": {
+    "Quantum (IQP)": [
+      0.58,
+      0.62,
+      0.635,
+      0.61,
+      0.59,
+      0.605
+    ],
+    "Linear": [
+      0.655,
+      0.665,
+      0.695,
+      0.665,
+      0.685,
+      0.68
+    ],
+    "RBF": [
+      0.645,
+      0.625,
+      0.66,
+      0.61,
+      0.655,
+      0.65
+    ]
+  }
+}

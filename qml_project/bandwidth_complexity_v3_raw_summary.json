@@ -1,0 +1,99 @@
+{
+ "protocol": {
+  "mode": "raw",
+  "run_id": "v3",
+  "coarse_seeds": [
+   42
+  ],
+  "final_seeds": [
+   0,
+   1,
+   2,
+   3
+  ],
+  "folds": 5,
+  "top_k": 6,
+  "S0": [
+   0.03125,
+   0.0625,
+   0.125,
+   0.25,
+   0.5,
+   1.0,
+   2.0,
+   4.0
+  ],
+  "C0": [
+   0.01,
+   0.1,
+   1.0,
+   10.0,
+   100.0,
+   1000.0
+  ],
+  "RBF0": [
+   0.015625,
+   0.0625,
+   0.25,
+   1.0,
+   4.0,
+   16.0,
+   64.0
+  ],
+  "lim_s": [
+   0.00390625,
+   16.0
+  ],
+  "lim_c": [
+   0.0001,
+   100000.0
+  ],
+  "lim_rbf": [
+   0.0009765625,
+   1024.0
+  ],
+  "max_final_ext": 4,
+  "run_huang": false,
+  "max_iter": 2000000,
+  "bootstrap": 2000,
+  "pca_seed": 42,
+  "require_mscoco_groups": true,
+  "sklearn": "1.6.1",
+  "numpy": "2.4.6",
+  "scipy": "1.16.3",
+  "python": "3.13.18"
+ },
+ "missing": [
+  "ag_news",
+  "agnews_minilm",
+  "agnews_roberta",
+  "cifar10",
+  "fashion_clip",
+  "fashion_dinov2",
+  "mscoco",
+  "mscoco_siglip",
+  "multiling_mbert_arabic",
+  "multiling_mbert_chinese",
+  "multiling_mbert_english",
+  "multiling_mbert_german",
+  "multiling_mbert_hindi",
+  "multiling_mbert_spanish",
+  "multiling_xlmr_arabic",
+  "multiling_xlmr_chinese",
+  "multiling_xlmr_english",
+  "multiling_xlmr_german",
+  "multiling_xlmr_hindi",
+  "multiling_xlmr_spanish",
+  "snlive",
+  "snlive_siglip",
+  "sst2_minilm",
+  "sst2_roberta",
+  "sst2_bert",
+  "cifar10_dinov2",
+  "cifar10_vit",
+  "fashion_vit",
+  "snlive_flava",
+  "mscoco_flava"
+ ],
+ "blocks": {}
+}

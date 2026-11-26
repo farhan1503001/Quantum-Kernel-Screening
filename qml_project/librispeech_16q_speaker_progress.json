@@ -1,0 +1,32 @@
+{
+  "librispeech_16q|quantum|42": {
+    "complete": true,
+    "kind": "quantum",
+    "seed": 42,
+    "utterance": {
+      "auc": 0.9990865302734375,
+      "tpr1": 0.9795
+    },
+    "speaker": {
+      "auc": 0.7283851718750001,
+      "tpr1": 0.12846875,
+      "neg": 0.49861298828125006
+    },
+    "retained": 0.13115747830525779
+  },
+  "librispeech_16q|rbf|42": {
+    "complete": true,
+    "kind": "rbf",
+    "seed": 42,
+    "utterance": {
+      "auc": 0.7780876152343751,
+      "tpr1": 0.12759375
+    },
+    "speaker": {
+      "auc": 0.6383639326171875,
+      "tpr1": 0.04840625,
+      "neg": 0.5006364755859375
+    },
+    "retained": 0.37937790840068575
+  }
+}

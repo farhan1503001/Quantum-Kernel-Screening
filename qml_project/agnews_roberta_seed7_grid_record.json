@@ -1,0 +1,39 @@
+{
+  "tag": "agnews_roberta",
+  "seed": 7,
+  "domain": "text",
+  "encoder": "RoBERTa",
+  "metric": "macro",
+  "n_qubits": 8,
+  "n_train": 1000,
+  "n_test": 200,
+  "quantum_accuracy": 0.835,
+  "quantum_f1": 0.8349252946087831,
+  "best_classical_f1": 0.8558518685159464,
+  "best_classical_kernel": "Linear",
+  "gap": -0.02092657390716335,
+  "ci_lo": -0.05998361091745544,
+  "ci_hi": 0.018447679466298838,
+  "excludes_zero": false,
+  "kta": 0.2914246070388021,
+  "c_kta": 0.3626807922735222,
+  "concentration": 0.16800815217856271,
+  "offdiag_quantum": 0.05196649980456659,
+  "offdiag_rbf": 0.6256271004676819,
+  "classical_baselines": {
+    "Linear": {
+      "accuracy": 0.855,
+      "f1": 0.8558518685159464
+    },
+    "RBF": {
+      "accuracy": 0.835,
+      "f1": 0.8347879845521354
+    },
+    "Polynomial": {
+      "accuracy": 0.845,
+      "f1": 0.8449811072109851
+    }
+  },
+  "sklearn_version": "1.6.1",
+  "pipeline": "identical to seed-42 run; seed substituted for 42; embeddings from seeds_A_embeddings.ipynb"
+}

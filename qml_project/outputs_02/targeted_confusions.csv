@@ -1,0 +1,21 @@
+tag,model,class_id,true_n,predicted_n
+sst2_roberta,Fixed quantum,0,98,57
+sst2_roberta,Fixed quantum,1,102,143
+sst2_roberta,Fixed classical (CV),0,98,89
+sst2_roberta,Fixed classical (CV),1,102,111
+sst2_roberta,Tuned quantum,0,98,61
+sst2_roberta,Tuned quantum,1,102,139
+sst2_roberta,Tuned classical,0,98,89
+sst2_roberta,Tuned classical,1,102,111
+snlive_flava,Fixed quantum,0,60,19
+snlive_flava,Fixed quantum,1,67,51
+snlive_flava,Fixed quantum,2,73,130
+snlive_flava,Fixed classical (CV),0,60,18
+snlive_flava,Fixed classical (CV),1,67,32
+snlive_flava,Fixed classical (CV),2,73,150
+snlive_flava,Tuned quantum,0,60,24
+snlive_flava,Tuned quantum,1,67,26
+snlive_flava,Tuned quantum,2,73,150
+snlive_flava,Tuned classical,0,60,2
+snlive_flava,Tuned classical,1,67,4
+snlive_flava,Tuned classical,2,73,194

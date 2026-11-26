@@ -1,0 +1,41 @@
+These diagnoses use saved predictions/search results, not new fitting.
+         tag block     domain           model  n_classes_true  n_classes_predicted  max_predicted_share  test_macro_f1  balanced_accuracy           true_class_counts     predicted_class_counts
+snlive_flava  main multimodal Tuned classical               3                    3                 0.97       0.188031           0.329756 {"0": 60, "1": 67, "2": 73} {"0": 2, "1": 4, "2": 194}
+
+         tag                model  cv_macro_f1  test_macro_f1  cv_minus_test        C  family  bandwidth_multiplier
+snlive_flava        Tuned quantum     0.369329       0.331190       0.038139 100000.0 Quantum                   NaN
+snlive_flava      Tuned classical     0.374045       0.188031       0.186014     10.0     RBF                  64.0
+sst2_roberta        Tuned quantum     0.541963       0.545917      -0.003955     10.0 Quantum                   NaN
+sst2_roberta      Tuned classical     0.555830       0.543069       0.012761      1.0    Poly                   NaN
+snlive_flava Fixed classical (CV)     0.354861       0.342024       0.012837      1.0    Poly                   NaN
+sst2_roberta Fixed classical (CV)     0.555830       0.543069       0.012761      1.0    Poly                   NaN
+
+Chance level (configurations where no model clears chance by 0.05):
+                  tag    block  k  chance_macro_f1  single_class_macro_f1  Fixed quantum  Fixed classical (CV)  Tuned quantum  Tuned classical  all four within 0.05 of chance  Fixed quantum (binary F1)  Fixed classical (CV) (binary F1)  Tuned quantum (binary F1)  Tuned classical (binary F1)
+multiling_mbert_hindi held-out  3           0.3357                 0.1818         0.3226                0.2828         0.3226           0.3300                            True                        NaN                               NaN                        NaN                          NaN
+               snlive     main  3           0.3318                 0.1783         0.2699                0.3014         0.3106           0.2966                            True                        NaN                               NaN                        NaN                          NaN
+         snlive_flava     main  3           0.3318                 0.1783         0.3170                0.3420         0.3312           0.1880                            True                        NaN                               NaN                        NaN                          NaN
+        snlive_siglip     main  3           0.3318                 0.1783         0.2462                0.2950         0.3505           0.3438                            True                        NaN                               NaN                        NaN                          NaN
+         sst2_roberta     main  2           0.4997                 0.3377         0.5418                0.5431         0.5459           0.5431                            True                     0.6449                            0.5728                      0.639                       0.5728
+
+Selection stability, eight most one-sided on test:
+          tag      side  chance_macro_f1  winner_cv_score  winner_cv_max_class_share  test_max_class_share  repeated_candidates  repeated_within_0.01_of_best  on_search_limit
+ snlive_flava classical           0.3318           0.3740                      0.570                 0.970                   14                             5            False
+ snlive_flava   quantum           0.3318           0.3693                      0.430                 0.750                   30                             7             True
+ sst2_roberta   quantum           0.4997           0.5420                      0.815                 0.695                   17                             5            False
+       snlive classical           0.3318           0.3399                      0.480                 0.615                   15                             6            False
+mscoco_siglip classical           0.5015           0.7807                      0.650                 0.605                   13                             6            False
+ mscoco_flava classical           0.5015           0.7903                      0.655                 0.605                    7                             3            False
+ mscoco_flava   quantum           0.5015           0.7926                      0.660                 0.605                   12                             6             True
+mscoco_siglip   quantum           0.5015           0.7799                      0.665                 0.600                   16                             6            False
+
+Median prediction agreement by block:
+          agree_fixed  agree_tuned
+block                             
+held-out        0.750       0.9050
+main            0.875       0.9825
+
+Original baselines that are near-constant predictors:
+         tag block paper_metric family  cv_macro_f1  cv_max_class_share  test_macro_f1  test_paper_metric_f1  test_max_class_share  picked_by_cv  picked_retro_macro  picked_retro_paper
+sst2_roberta  main       binary Linear       0.5037                0.91         0.4624                0.6855                 0.905         False               False                True
+Prediction collapse alone does not establish feature shift, search-limit causation, or a pipeline bug.

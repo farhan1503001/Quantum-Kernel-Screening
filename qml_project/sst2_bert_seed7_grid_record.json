@@ -1,0 +1,40 @@
+{
+  "tag": "sst2_bert",
+  "seed": 7,
+  "domain": "text",
+  "encoder": "BERT",
+  "metric": "binary",
+  "n_qubits": 8,
+  "n_train": 1000,
+  "n_test": 200,
+  "quantum_accuracy": 0.67,
+  "quantum_f1": 0.67,
+  "best_classical_f1": 0.7029702970297029,
+  "best_classical_kernel": "Polynomial",
+  "gap": -0.03297029702970289,
+  "ci_lo": -0.07977158655297055,
+  "ci_hi": 0.015102965059577336,
+  "excludes_zero": false,
+  "kta": 0.028538313115058913,
+  "c_kta": 0.04711403680481228,
+  "concentration": 0.16085637900167435,
+  "offdiag_quantum": 0.07753591893936343,
+  "offdiag_rbf": 0.6419757008552551,
+  "classical_baselines": {
+    "Linear": {
+      "accuracy": 0.69,
+      "f1": 0.69
+    },
+    "RBF": {
+      "accuracy": 0.66,
+      "f1": 0.6699029126213593
+    },
+    "Polynomial": {
+      "accuracy": 0.7,
+      "f1": 0.7029702970297029
+    }
+  },
+  "pipeline": "identical to seed-42 run; seed substituted for 42",
+  "sklearn_version": "1.6.1",
+  "transformers_version": "5.17.0"
+}

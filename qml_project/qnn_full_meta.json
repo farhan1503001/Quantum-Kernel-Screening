@@ -1,0 +1,27 @@
+{
+  "seeds": [
+    42,
+    123,
+    2024
+  ],
+  "M_shadow": 128,
+  "n_pool": 500,
+  "shadow_frac": 0.5,
+  "n_qubits": 8,
+  "n_layers": 3,
+  "epochs": 40,
+  "lr": 0.05,
+  "batch": 32,
+  "configs": [
+    "sst2_bert",
+    "agnews_bert",
+    "cifar10_clip",
+    "fashion_mnist_clip",
+    "mnist_01"
+  ],
+  "models": [
+    "QNN",
+    "ClassicalNN"
+  ],
+  "n_runs_completed": 10
+}

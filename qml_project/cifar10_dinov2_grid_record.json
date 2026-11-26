@@ -1,0 +1,74 @@
+{
+  "tag": "cifar10_dinov2",
+  "domain": "vision",
+  "dataset": "cifar10_binary",
+  "encoder": "dinov2",
+  "metric": "binary",
+  "n_qubits": 8,
+  "n_train": 1000,
+  "n_test": 200,
+  "compute_time_min": 106.0,
+  "quantum_accuracy": 1.0,
+  "quantum_f1": 1.0,
+  "best_classical_f1": 1.0,
+  "best_classical_kernel": "Linear",
+  "gap": 0.0,
+  "kta": 0.2973098836515609,
+  "c_kta": 0.6914959822851692,
+  "concentration": 0.18140011735876913,
+  "geometric_difference_exact": 61.73826718406701,
+  "geometric_difference_proxy": 23.08326459704943,
+  "offdiag_quantum": 0.03746156115419803,
+  "offdiag_rbf": 0.5063007473945618,
+  "ci_lo": 0.0,
+  "ci_hi": 0.0,
+  "excludes_zero": false,
+  "classical_baselines": {
+    "Linear": {
+      "accuracy": 1.0,
+      "f1": 1.0
+    },
+    "RBF": {
+      "accuracy": 1.0,
+      "f1": 1.0
+    },
+    "Polynomial": {
+      "accuracy": 1.0,
+      "f1": 1.0
+    }
+  },
+  "learning_curve_sizes": [
+    50,
+    100,
+    200,
+    400,
+    700,
+    1000
+  ],
+  "learning_curve_results": {
+    "Quantum (IQP)": [
+      1.0,
+      0.975609756097561,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "Linear": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ],
+    "RBF": [
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0,
+      1.0
+    ]
+  }
+}

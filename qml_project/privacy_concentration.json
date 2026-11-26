@@ -1,0 +1,162 @@
+{
+  "per_config": {
+    "sst2_bert": {
+      "quantum": {
+        "offdiag_mean": 0.05824177237221736,
+        "offdiag_std": 0.11254061340002786,
+        "conc_ratio": 1.946062240822096,
+        "identity_gap": 0.9417582276277798
+      },
+      "rbf": {
+        "offdiag_mean": 0.2667616172589156,
+        "offdiag_std": 0.1933983243971826,
+        "conc_ratio": 0.7263674403038957,
+        "identity_gap": 0.7332383827410842
+      }
+    },
+    "cifar10_clip": {
+      "quantum": {
+        "offdiag_mean": 0.03541772965404616,
+        "offdiag_std": 0.08213125244134152,
+        "conc_ratio": 2.363121815753271,
+        "identity_gap": 0.964582270345951
+      },
+      "rbf": {
+        "offdiag_mean": 0.22663187306691226,
+        "offdiag_std": 0.18506135945043814,
+        "conc_ratio": 0.8165988040523825,
+        "identity_gap": 0.7733681269330878
+      }
+    },
+    "agnews_bert": {
+      "quantum": {
+        "offdiag_mean": 0.036358753549515455,
+        "offdiag_std": 0.08172058880449605,
+        "conc_ratio": 2.2486844608145766,
+        "identity_gap": 0.9636412464504819
+      },
+      "rbf": {
+        "offdiag_mean": 0.23624469075607768,
+        "offdiag_std": 0.17248812870271593,
+        "conc_ratio": 0.730752398766971,
+        "identity_gap": 0.7637553092439222
+      }
+    },
+    "sst2_roberta": {
+      "quantum": {
+        "offdiag_mean": 0.039278632909715984,
+        "offdiag_std": 0.08524322788872424,
+        "conc_ratio": 2.1753487758140087,
+        "identity_gap": 0.9607213670902812
+      },
+      "rbf": {
+        "offdiag_mean": 0.24732816234446775,
+        "offdiag_std": 0.18226193067346563,
+        "conc_ratio": 0.7380329514964318,
+        "identity_gap": 0.7526718376555322
+      }
+    },
+    "sst2_minilm": {
+      "quantum": {
+        "offdiag_mean": 0.029696959066792,
+        "offdiag_std": 0.06727244438546383,
+        "conc_ratio": 2.3413541739378196,
+        "identity_gap": 0.9703030409332052
+      },
+      "rbf": {
+        "offdiag_mean": 0.21313967869850795,
+        "offdiag_std": 0.16265802674674712,
+        "conc_ratio": 0.7631331174957726,
+        "identity_gap": 0.7868603213014921
+      }
+    },
+    "cifar10_dinov2": {
+      "quantum": {
+        "offdiag_mean": 0.035690722523217984,
+        "offdiag_std": 0.09751518634223044,
+        "conc_ratio": 2.7433868640411263,
+        "identity_gap": 0.9643092774767793
+      },
+      "rbf": {
+        "offdiag_mean": 0.23501695827551575,
+        "offdiag_std": 0.21131492497790813,
+        "conc_ratio": 0.8994520830115399,
+        "identity_gap": 0.7649830417244843
+      }
+    },
+    "fashion_mnist_clip": {
+      "quantum": {
+        "offdiag_mean": 0.04486336137931254,
+        "offdiag_std": 0.11003287601540275,
+        "conc_ratio": 2.4880966524201273,
+        "identity_gap": 0.9551366386206848
+      },
+      "rbf": {
+        "offdiag_mean": 0.26158521218232783,
+        "offdiag_std": 0.23326533689569914,
+        "conc_ratio": 0.8921773789556315,
+        "identity_gap": 0.7384147878176721
+      }
+    },
+    "fashion_mnist_dinov2": {
+      "quantum": {
+        "offdiag_mean": 0.028638924399040647,
+        "offdiag_std": 0.08425881396216862,
+        "conc_ratio": 2.9548215216324287,
+        "identity_gap": 0.9713610756009565
+      },
+      "rbf": {
+        "offdiag_mean": 0.22781116127777756,
+        "offdiag_std": 0.22070255840024824,
+        "conc_ratio": 0.9689804118478952,
+        "identity_gap": 0.7721888387222225
+      }
+    },
+    "agnews_roberta": {
+      "quantum": {
+        "offdiag_mean": 0.042794371466952676,
+        "offdiag_std": 0.09956165518066194,
+        "conc_ratio": 2.3842132864468777,
+        "identity_gap": 0.9572056285330445
+      },
+      "rbf": {
+        "offdiag_mean": 0.3327460299654206,
+        "offdiag_std": 0.2108767891758161,
+        "conc_ratio": 0.6343833204864625,
+        "identity_gap": 0.6672539700345794
+      }
+    },
+    "agnews_minilm": {
+      "quantum": {
+        "offdiag_mean": 0.02584765398333456,
+        "offdiag_std": 0.06579008174850831,
+        "conc_ratio": 2.5523172060528787,
+        "identity_gap": 0.9741523460166627
+      },
+      "rbf": {
+        "offdiag_mean": 0.21503208445380903,
+        "offdiag_std": 0.16858365954620655,
+        "conc_ratio": 0.7842249963337314,
+        "identity_gap": 0.7849679155461909
+      }
+    }
+  },
+  "correlations": {
+    "idgap_vs_auc": [
+      -0.05454545454545454,
+      0.8810361811618526
+    ],
+    "cov_vs_auc": [
+      -0.6363636363636362,
+      0.04791172612997547
+    ],
+    "idgap_vs_gap": [
+      -0.5272727272727272,
+      0.11730806555020223
+    ],
+    "cov_vs_gap": [
+      -0.8303030303030302,
+      0.0029402270232795065
+    ]
+  }
+}

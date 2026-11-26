@@ -1,0 +1,23 @@
+{
+  "dataset": "mscoco",
+  "task": "image_text_matching",
+  "embedding_type": "clip_joint_1024",
+  "n_classes": 2,
+  "metric": "binary",
+  "n_train": 1000,
+  "n_test": 200,
+  "baselines": {
+    "Linear": {
+      "accuracy": 0.545,
+      "f1": 0.5472636815920398
+    },
+    "RBF": {
+      "accuracy": 0.78,
+      "f1": 0.7884615384615384
+    },
+    "Polynomial": {
+      "accuracy": 0.8,
+      "f1": 0.8076923076923077
+    }
+  }
+}

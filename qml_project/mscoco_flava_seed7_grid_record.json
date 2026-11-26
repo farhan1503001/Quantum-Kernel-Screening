@@ -1,0 +1,39 @@
+{
+  "tag": "mscoco_flava",
+  "seed": 7,
+  "domain": "multimodal",
+  "encoder": "FLAVA",
+  "metric": "binary",
+  "n_qubits": 8,
+  "n_train": 1000,
+  "n_test": 200,
+  "quantum_accuracy": 0.72,
+  "quantum_f1": 0.7307692307692307,
+  "best_classical_f1": 0.7892376681614349,
+  "best_classical_kernel": "Polynomial",
+  "gap": -0.0584684373922042,
+  "ci_lo": -0.1166713728654027,
+  "ci_hi": 0.002356625140354688,
+  "excludes_zero": false,
+  "kta": 0.044852261495463695,
+  "c_kta": 0.019114424572803764,
+  "concentration": 0.29977211202924076,
+  "offdiag_quantum": 0.02726557815800229,
+  "offdiag_rbf": 0.5312916040420532,
+  "classical_baselines": {
+    "Linear": {
+      "accuracy": 0.595,
+      "f1": 0.7137809187279152
+    },
+    "RBF": {
+      "accuracy": 0.755,
+      "f1": 0.776255707762557
+    },
+    "Polynomial": {
+      "accuracy": 0.765,
+      "f1": 0.7892376681614349
+    }
+  },
+  "sklearn_version": "1.6.1",
+  "pipeline": "identical to seed-42 run; seed substituted for 42; embeddings from seeds_A_embeddings.ipynb"
+}

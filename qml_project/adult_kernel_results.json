@@ -1,0 +1,266 @@
+{
+  "adult|quantum|42": {
+    "complete": true,
+    "tag": "adult",
+    "kind": "quantum",
+    "seed": 42,
+    "lira_auc": 0.6890654248046875,
+    "lira_tpr": {
+      "0.001": 0.021625,
+      "0.01": 0.076125,
+      "0.05": 0.18721875
+    },
+    "thresh_auc": 0.5635370283203125,
+    "thresh_tpr": {
+      "0.001": 0.00121875,
+      "0.01": 0.0095,
+      "0.05": 0.04896875
+    },
+    "neg_control_auc": 0.5026704599609375,
+    "pos_control_auc": 0.7583138125000001,
+    "pos_control_fit": 0.912,
+    "test_acc": 0.812
+  },
+  "adult|linear|42": {
+    "complete": true,
+    "tag": "adult",
+    "kind": "linear",
+    "seed": 42,
+    "lira_auc": 0.53807799609375,
+    "lira_tpr": {
+      "0.001": 0.00196875,
+      "0.01": 0.01596875,
+      "0.05": 0.0666875
+    },
+    "thresh_auc": 0.5116021152343749,
+    "thresh_tpr": {
+      "0.001": 0.00084375,
+      "0.01": 0.009625,
+      "0.05": 0.05021875
+    },
+    "neg_control_auc": 0.49882675195312504,
+    "pos_control_auc": 0.5213874375,
+    "pos_control_fit": 0.522,
+    "test_acc": 0.808
+  },
+  "adult|poly|42": {
+    "complete": true,
+    "tag": "adult",
+    "kind": "poly",
+    "seed": 42,
+    "lira_auc": 0.5930195087890625,
+    "lira_tpr": {
+      "0.001": 0.002125,
+      "0.01": 0.01959375,
+      "0.05": 0.1005
+    },
+    "thresh_auc": 0.5444262441406249,
+    "thresh_tpr": {
+      "0.001": 0.001,
+      "0.01": 0.01090625,
+      "0.05": 0.05115625
+    },
+    "neg_control_auc": 0.5012875224609374,
+    "pos_control_auc": 0.6431801250000001,
+    "pos_control_fit": 0.72,
+    "test_acc": 0.784
+  },
+  "adult|rbf|42": {
+    "complete": true,
+    "tag": "adult",
+    "kind": "rbf",
+    "seed": 42,
+    "lira_auc": 0.5989173017578124,
+    "lira_tpr": {
+      "0.001": 0.0069375,
+      "0.01": 0.03409375,
+      "0.05": 0.11178125
+    },
+    "thresh_auc": 0.5247045419921875,
+    "thresh_tpr": {
+      "0.001": 0.001125,
+      "0.01": 0.01053125,
+      "0.05": 0.05203125
+    },
+    "neg_control_auc": 0.500080654296875,
+    "pos_control_auc": 0.729211,
+    "pos_control_fit": 0.81,
+    "test_acc": 0.82
+  },
+  "adult|quantum|123": {
+    "complete": true,
+    "tag": "adult",
+    "kind": "quantum",
+    "seed": 123,
+    "lira_auc": 0.6950890498046876,
+    "lira_tpr": {
+      "0.001": 0.023375,
+      "0.01": 0.07778125,
+      "0.05": 0.1968125
+    },
+    "thresh_auc": 0.5610213749999999,
+    "thresh_tpr": {
+      "0.001": 0.0010625,
+      "0.01": 0.010875,
+      "0.05": 0.0515625
+    },
+    "neg_control_auc": 0.5043780224609375,
+    "pos_control_auc": 0.74908575,
+    "pos_control_fit": 0.93,
+    "test_acc": 0.788
+  },
+  "adult|linear|123": {
+    "complete": true,
+    "tag": "adult",
+    "kind": "linear",
+    "seed": 123,
+    "lira_auc": 0.5415015624999999,
+    "lira_tpr": {
+      "0.001": 0.00221875,
+      "0.01": 0.01709375,
+      "0.05": 0.07184375
+    },
+    "thresh_auc": 0.5106739326171875,
+    "thresh_tpr": {
+      "0.001": 0.0005625,
+      "0.01": 0.00878125,
+      "0.05": 0.04665625
+    },
+    "neg_control_auc": 0.50214538671875,
+    "pos_control_auc": 0.539466625,
+    "pos_control_fit": 0.546,
+    "test_acc": 0.8
+  },
+  "adult|poly|123": {
+    "complete": true,
+    "tag": "adult",
+    "kind": "poly",
+    "seed": 123,
+    "lira_auc": 0.5958810234375,
+    "lira_tpr": {
+      "0.001": 0.0029375,
+      "0.01": 0.02278125,
+      "0.05": 0.10453125
+    },
+    "thresh_auc": 0.5429076845703125,
+    "thresh_tpr": {
+      "0.001": 0.00109375,
+      "0.01": 0.0095,
+      "0.05": 0.0464375
+    },
+    "neg_control_auc": 0.5046728857421875,
+    "pos_control_auc": 0.6308201250000001,
+    "pos_control_fit": 0.7,
+    "test_acc": 0.796
+  },
+  "adult|rbf|123": {
+    "complete": true,
+    "tag": "adult",
+    "kind": "rbf",
+    "seed": 123,
+    "lira_auc": 0.600847064453125,
+    "lira_tpr": {
+      "0.001": 0.00796875,
+      "0.01": 0.04234375,
+      "0.05": 0.1158125
+    },
+    "thresh_auc": 0.521714734375,
+    "thresh_tpr": {
+      "0.001": 0.00078125,
+      "0.01": 0.00940625,
+      "0.05": 0.0491875
+    },
+    "neg_control_auc": 0.501978447265625,
+    "pos_control_auc": 0.71332075,
+    "pos_control_fit": 0.824,
+    "test_acc": 0.788
+  },
+  "adult|quantum|2024": {
+    "complete": true,
+    "tag": "adult",
+    "kind": "quantum",
+    "seed": 2024,
+    "lira_auc": 0.6986106591796875,
+    "lira_tpr": {
+      "0.001": 0.019625,
+      "0.01": 0.08084375,
+      "0.05": 0.19525
+    },
+    "thresh_auc": 0.5605569990234375,
+    "thresh_tpr": {
+      "0.001": 0.001,
+      "0.01": 0.00934375,
+      "0.05": 0.04725
+    },
+    "neg_control_auc": 0.500290888671875,
+    "pos_control_auc": 0.763074875,
+    "pos_control_fit": 0.92,
+    "test_acc": 0.796
+  },
+  "adult|linear|2024": {
+    "complete": true,
+    "tag": "adult",
+    "kind": "linear",
+    "seed": 2024,
+    "lira_auc": 0.5402773476562499,
+    "lira_tpr": {
+      "0.001": 0.003,
+      "0.01": 0.017,
+      "0.05": 0.066875
+    },
+    "thresh_auc": 0.5106286474609375,
+    "thresh_tpr": {
+      "0.001": 0.00075,
+      "0.01": 0.010375,
+      "0.05": 0.05384375
+    },
+    "neg_control_auc": 0.4984468681640625,
+    "pos_control_auc": 0.5296524374999999,
+    "pos_control_fit": 0.524,
+    "test_acc": 0.776
+  },
+  "adult|poly|2024": {
+    "complete": true,
+    "tag": "adult",
+    "kind": "poly",
+    "seed": 2024,
+    "lira_auc": 0.6048825693359375,
+    "lira_tpr": {
+      "0.001": 0.00278125,
+      "0.01": 0.0310625,
+      "0.05": 0.1125625
+    },
+    "thresh_auc": 0.5492712529296875,
+    "thresh_tpr": {
+      "0.001": 0.00065625,
+      "0.01": 0.01003125,
+      "0.05": 0.05021875
+    },
+    "neg_control_auc": 0.5020815673828125,
+    "pos_control_auc": 0.6533450000000001,
+    "pos_control_fit": 0.724,
+    "test_acc": 0.764
+  },
+  "adult|rbf|2024": {
+    "complete": true,
+    "tag": "adult",
+    "kind": "rbf",
+    "seed": 2024,
+    "lira_auc": 0.6033817041015626,
+    "lira_tpr": {
+      "0.001": 0.00784375,
+      "0.01": 0.03875,
+      "0.05": 0.1148125
+    },
+    "thresh_auc": 0.52175057421875,
+    "thresh_tpr": {
+      "0.001": 0.00125,
+      "0.01": 0.011625,
+      "0.05": 0.0510625
+    },
+    "neg_control_auc": 0.49819800292968747,
+    "pos_control_auc": 0.7267026875,
+    "pos_control_fit": 0.818,
+    "test_acc": 0.788
+  }
+}

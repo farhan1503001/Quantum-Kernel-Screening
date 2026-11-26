@@ -1,0 +1,83 @@
+{
+  "sst2_bert E300 QNN": {
+    "aggregate_auc": 0.6242948828125,
+    "tpr@1%": 0.0355,
+    "n_shadows": 64,
+    "gini": 0.27967535155985795,
+    "atyp_corr": 0.3188395473581894,
+    "atyp_p": 2.8123960215110175e-13,
+    "interpretable": true
+  },
+  "sst2_bert QNN": {
+    "aggregate_auc": 0.551070115234375,
+    "tpr@1%": 0.021875,
+    "n_shadows": 128,
+    "gini": 0.4199549873788994,
+    "atyp_corr": 0.19571118284473138,
+    "atyp_p": 1.0433913978140352e-05,
+    "interpretable": false
+  },
+  "agnews_bert QNN": {
+    "aggregate_auc": 0.5359290624999999,
+    "tpr@1%": 0.0255625,
+    "n_shadows": 128,
+    "gini": 0.46404836104919617,
+    "atyp_corr": 0.15273286693146773,
+    "atyp_p": 0.0006107648481254966,
+    "interpretable": false
+  },
+  "cifar10_clip QNN": {
+    "aggregate_auc": 0.51123047265625,
+    "tpr@1%": 0.01353125,
+    "n_shadows": 128,
+    "gini": 0.5473206465321497,
+    "atyp_corr": 0.10203352813411252,
+    "atyp_p": 0.022501942916922965,
+    "interpretable": false
+  },
+  "fashion_mnist_clip QNN": {
+    "aggregate_auc": 0.5089897548828126,
+    "tpr@1%": 0.0145625,
+    "n_shadows": 128,
+    "gini": 0.46142484885491775,
+    "atyp_corr": 0.12393639974559897,
+    "atyp_p": 0.005518944130109443,
+    "interpretable": false
+  },
+  "mnist_01 QNN (Su comp.)": {
+    "aggregate_auc": 0.5090728369140625,
+    "tpr@1%": 0.01415625,
+    "n_shadows": 128,
+    "gini": 0.4681855447050098,
+    "atyp_corr": -0.13406760827043307,
+    "atyp_p": 0.0026653283710066826,
+    "interpretable": false
+  },
+  "sst2_bert ClassicalNN": {
+    "aggregate_auc": 0.5369717265625,
+    "tpr@1%": 0.01440625,
+    "n_shadows": 128,
+    "gini": 0.1673384650069861,
+    "atyp_corr": 0.035989583958335826,
+    "atyp_p": 0.42197616376100844,
+    "interpretable": false
+  },
+  "agnews_bert ClassicalNN": {
+    "aggregate_auc": 0.5278891669921876,
+    "tpr@1%": 0.0125,
+    "n_shadows": 128,
+    "gini": 0.2286443169595027,
+    "atyp_corr": 0.12995888783555135,
+    "atyp_p": 0.003602159541166338,
+    "interpretable": false
+  },
+  "mnist_01 ClassicalNN": {
+    "aggregate_auc": 0.5137042333984374,
+    "tpr@1%": 0.01471875,
+    "n_shadows": 128,
+    "gini": 0.3712386965790054,
+    "atyp_corr": -0.007855903423613694,
+    "atyp_p": 0.8609017564387887,
+    "interpretable": false
+  }
+}

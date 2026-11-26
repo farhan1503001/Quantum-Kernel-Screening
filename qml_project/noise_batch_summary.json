@@ -1,0 +1,102 @@
+[
+  {
+    "tag": "sst2_bert",
+    "status": "already_done",
+    "analytic_q": 0.670376505572583,
+    "best_classical": 0.6928287413917902,
+    "shot_thresh": 128,
+    "depol_within": 0.1,
+    "depol_parity": null,
+    "minutes": 0.0
+  },
+  {
+    "tag": "cifar10_clip",
+    "status": "already_done",
+    "analytic_q": 0.9899326599326598,
+    "best_classical": 0.9933162470475904,
+    "shot_thresh": 128,
+    "depol_within": 0.1,
+    "depol_parity": null,
+    "minutes": 0.0
+  },
+  {
+    "tag": "agnews_bert",
+    "status": "already_done",
+    "analytic_q": 0.890956146245907,
+    "best_classical": 0.9073026970601802,
+    "shot_thresh": 32,
+    "depol_within": 0.5,
+    "depol_parity": null,
+    "minutes": 0.0
+  },
+  {
+    "tag": "sst2_roberta",
+    "status": "already_done",
+    "analytic_q": 0.6400822743564679,
+    "best_classical": 0.6686429725945046,
+    "shot_thresh": 64,
+    "depol_within": 0.5,
+    "depol_parity": null,
+    "minutes": 0.0
+  },
+  {
+    "tag": "sst2_minilm",
+    "status": "already_done",
+    "analytic_q": 0.6949963844856516,
+    "best_classical": 0.7072495465236371,
+    "shot_thresh": 64,
+    "depol_within": 0.5,
+    "depol_parity": null,
+    "minutes": 0.0
+  },
+  {
+    "tag": "cifar10_dinov2",
+    "status": "completed",
+    "analytic_q": 1.0,
+    "best_classical": 1.0,
+    "shot_thresh": 8,
+    "depol_within": 0.5,
+    "depol_parity": 0.3,
+    "minutes": 0.3
+  },
+  {
+    "tag": "fashion_mnist_clip",
+    "status": "completed",
+    "analytic_q": 0.9950246280909498,
+    "best_classical": 1.0,
+    "shot_thresh": 8,
+    "depol_within": 0.5,
+    "depol_parity": null,
+    "minutes": 30.6
+  },
+  {
+    "tag": "fashion_mnist_dinov2",
+    "status": "completed",
+    "analytic_q": 0.9983249581239532,
+    "best_classical": 1.0,
+    "shot_thresh": 8,
+    "depol_within": 0.5,
+    "depol_parity": null,
+    "minutes": 90.1
+  },
+  {
+    "tag": "agnews_roberta",
+    "status": "completed",
+    "analytic_q": 0.9280572709332788,
+    "best_classical": 0.9492941650577119,
+    "shot_thresh": 16,
+    "depol_within": 0.5,
+    "depol_parity": null,
+    "minutes": 88.2
+  },
+  {
+    "tag": "agnews_minilm",
+    "status": "completed",
+    "analytic_q": 0.9533250814766655,
+    "best_classical": 0.9617859979758238,
+    "shot_thresh": 64,
+    "depol_within": 0.5,
+    "depol_parity": null,
+    "minutes": 89.6
+  }
+]

@@ -1,0 +1,297 @@
+{
+  "n_configs": 24,
+  "results": [
+    {
+      "tag": "ag_news",
+      "quantum_f1": 0.7222226187320296,
+      "best_classical_f1": 0.7359603795164541,
+      "gap": -0.013737760784424458,
+      "kta": 0.1952288368973406,
+      "concentration": 0.15857705572517855,
+      "geometric_difference": 19.865918316272282,
+      "geometric_difference_exact": 61.355934070253554,
+      "metric": "macro"
+    },
+    {
+      "tag": "agnews_minilm",
+      "quantum_f1": 0.8121184094187723,
+      "best_classical_f1": 0.8227637446458956,
+      "gap": -0.010645335227123298,
+      "kta": 0.2495751492172707,
+      "concentration": 0.36824361768530095,
+      "geometric_difference": 56.74352673344415,
+      "geometric_difference_exact": 55.06505157886946,
+      "metric": "macro"
+    },
+    {
+      "tag": "agnews_roberta",
+      "quantum_f1": 0.8062150114036907,
+      "best_classical_f1": 0.8060005861427764,
+      "gap": 0.00021442526091430825,
+      "kta": 0.3199090706716091,
+      "concentration": 0.18782441337103975,
+      "geometric_difference": 29.575323201505142,
+      "geometric_difference_exact": 72.46757975504369,
+      "metric": "macro"
+    },
+    {
+      "tag": "cifar10",
+      "quantum_f1": 0.9949748743718593,
+      "best_classical_f1": 0.9949748743718593,
+      "gap": 0.0,
+      "kta": 0.27232699275165784,
+      "concentration": 0.265746649595577,
+      "geometric_difference": 31.32275173382275,
+      "geometric_difference_exact": 53.40445469673125,
+      "metric": "binary"
+    },
+    {
+      "tag": "fashion_clip",
+      "quantum_f1": 1.0,
+      "best_classical_f1": 1.0,
+      "gap": 0.0,
+      "kta": 0.4128806445212477,
+      "concentration": 0.14559101885405015,
+      "geometric_difference": 14.668908423168576,
+      "geometric_difference_exact": 65.37321276130784,
+      "metric": "binary"
+    },
+    {
+      "tag": "fashion_dinov2",
+      "quantum_f1": 1.0,
+      "best_classical_f1": 1.0,
+      "gap": 0.0,
+      "kta": 0.2906640751146669,
+      "concentration": 0.26209850820689634,
+      "geometric_difference": 26.31270671608209,
+      "geometric_difference_exact": 56.86772648586834,
+      "metric": "binary"
+    },
+    {
+      "tag": "mscoco",
+      "quantum_f1": 0.7537688442211056,
+      "best_classical_f1": 0.8076923076923077,
+      "gap": -0.05392346347120214,
+      "kta": 0.042498199806784286,
+      "concentration": 0.3004942964900385,
+      "geometric_difference": 43.27972121870908,
+      "geometric_difference_exact": 54.6750505226201,
+      "metric": "binary"
+    },
+    {
+      "tag": "mscoco_siglip",
+      "quantum_f1": 0.7981220657276995,
+      "best_classical_f1": 0.8095238095238095,
+      "gap": -0.011401743796110031,
+      "kta": 0.05332385378067481,
+      "concentration": 0.2660029944463454,
+      "geometric_difference": 35.09085420770604,
+      "geometric_difference_exact": 50.85996570395861,
+      "metric": "binary"
+    },
+    {
+      "tag": "multiling_mbert_arabic",
+      "quantum_f1": 0.3918911335578002,
+      "best_classical_f1": 0.4686839429328567,
+      "gap": -0.0767928093750565,
+      "kta": 0.023816129238129796,
+      "concentration": 0.07616277101599857,
+      "geometric_difference": 13.612988809561749,
+      "geometric_difference_exact": 85.57508586855685,
+      "metric": "macro"
+    },
+    {
+      "tag": "multiling_mbert_chinese",
+      "quantum_f1": 0.5016466441980141,
+      "best_classical_f1": 0.5734135902933857,
+      "gap": -0.0717669460953716,
+      "kta": 0.05677105446815693,
+      "concentration": 0.05734293262759428,
+      "geometric_difference": 10.27591907430507,
+      "geometric_difference_exact": 72.52809381899824,
+      "metric": "macro"
+    },
+    {
+      "tag": "multiling_mbert_english",
+      "quantum_f1": 0.5135265700483091,
+      "best_classical_f1": 0.5103796586555207,
+      "gap": 0.003146911392788443,
+      "kta": 0.02257803271716825,
+      "concentration": 0.18137164667637845,
+      "geometric_difference": 27.01938791810626,
+      "geometric_difference_exact": 72.09390529197829,
+      "metric": "macro"
+    },
+    {
+      "tag": "multiling_mbert_german",
+      "quantum_f1": 0.5096590360282044,
+      "best_classical_f1": 0.5221581745645917,
+      "gap": -0.012499138536387289,
+      "kta": 0.11040257483540383,
+      "concentration": 0.1197524928553899,
+      "geometric_difference": 18.241995101611288,
+      "geometric_difference_exact": 82.32579396784577,
+      "metric": "macro"
+    },
+    {
+      "tag": "multiling_mbert_hindi",
+      "quantum_f1": 0.32260139860139864,
+      "best_classical_f1": 0.3997396043264263,
+      "gap": -0.07713820572502766,
+      "kta": 0.010220651438245697,
+      "concentration": 0.09829394914329706,
+      "geometric_difference": 13.135779220163021,
+      "geometric_difference_exact": 70.33098594828631,
+      "metric": "macro"
+    },
+    {
+      "tag": "multiling_mbert_spanish",
+      "quantum_f1": 0.39183191006899215,
+      "best_classical_f1": 0.42745761343957045,
+      "gap": -0.0356257033705783,
+      "kta": 0.029563882243530078,
+      "concentration": 0.09976751155877558,
+      "geometric_difference": 16.336644806668442,
+      "geometric_difference_exact": 79.97143150354309,
+      "metric": "macro"
+    },
+    {
+      "tag": "multiling_xlmr_arabic",
+      "quantum_f1": 0.5815410128842964,
+      "best_classical_f1": 0.5713272543059777,
+      "gap": 0.010213758578318632,
+      "kta": 0.06151440998582289,
+      "concentration": 0.051839638591649244,
+      "geometric_difference": 8.37979550836802,
+      "geometric_difference_exact": 66.58510349380971,
+      "metric": "macro"
+    },
+    {
+      "tag": "multiling_xlmr_chinese",
+      "quantum_f1": 0.657014157014157,
+      "best_classical_f1": 0.7065907719051872,
+      "gap": -0.04957661489103016,
+      "kta": 0.11498309236782979,
+      "concentration": 0.02419129811747525,
+      "geometric_difference": 5.8137839436363645,
+      "geometric_difference_exact": 73.12947153953733,
+      "metric": "macro"
+    },
+    {
+      "tag": "multiling_xlmr_english",
+      "quantum_f1": 0.4573711576332579,
+      "best_classical_f1": 0.5250938880740631,
+      "gap": -0.06772273044080518,
+      "kta": 0.0393175975622496,
+      "concentration": 0.05069016742904197,
+      "geometric_difference": 7.9204761755984325,
+      "geometric_difference_exact": 81.1429313574404,
+      "metric": "macro"
+    },
+    {
+      "tag": "multiling_xlmr_german",
+      "quantum_f1": 0.5586284086284087,
+      "best_classical_f1": 0.5786798590403903,
+      "gap": -0.02005145041198164,
+      "kta": 0.09264625314756277,
+      "concentration": 0.029160474500118695,
+      "geometric_difference": 5.6000525747554875,
+      "geometric_difference_exact": 68.5142531934059,
+      "metric": "macro"
+    },
+    {
+      "tag": "multiling_xlmr_hindi",
+      "quantum_f1": 0.3722631064260023,
+      "best_classical_f1": 0.4161206228422462,
+      "gap": -0.043857516416243914,
+      "kta": 0.004281541484722757,
+      "concentration": 0.010042724746439316,
+      "geometric_difference": 2.679337261160416,
+      "geometric_difference_exact": 52.76881162317749,
+      "metric": "macro"
+    },
+    {
+      "tag": "multiling_xlmr_spanish",
+      "quantum_f1": 0.4496756697089214,
+      "best_classical_f1": 0.43736111039426157,
+      "gap": 0.012314559314659856,
+      "kta": 0.04882420121222155,
+      "concentration": 0.06236218572066682,
+      "geometric_difference": 8.55817578584274,
+      "geometric_difference_exact": 59.375036041551475,
+      "metric": "macro"
+    },
+    {
+      "tag": "snlive",
+      "quantum_f1": 0.2699162127954458,
+      "best_classical_f1": 0.3117348555187462,
+      "gap": -0.04181864272330038,
+      "kta": 0.007743045304906043,
+      "concentration": 0.13547630210549869,
+      "geometric_difference": 21.398001661404905,
+      "geometric_difference_exact": 45.78074728420939,
+      "metric": "macro"
+    },
+    {
+      "tag": "snlive_siglip",
+      "quantum_f1": 0.2462292609351433,
+      "best_classical_f1": 0.29500090696387526,
+      "gap": -0.04877164602873196,
+      "kta": 0.009205880983976027,
+      "concentration": 0.17180085517386565,
+      "geometric_difference": 25.223619526037957,
+      "geometric_difference_exact": 48.36332619447246,
+      "metric": "macro"
+    },
+    {
+      "tag": "sst2_minilm",
+      "quantum_f1": 0.7342995169082126,
+      "best_classical_f1": 0.7804878048780488,
+      "gap": -0.046188287969836206,
+      "kta": 0.06334361261145012,
+      "concentration": 0.2934379357885249,
+      "geometric_difference": 39.15902063742753,
+      "geometric_difference_exact": 56.38077411974787,
+      "metric": "binary"
+    },
+    {
+      "tag": "sst2_roberta",
+      "quantum_f1": 0.6448979591836734,
+      "best_classical_f1": 0.6855123674911661,
+      "gap": -0.04061440830749263,
+      "kta": 0.012735548260392356,
+      "concentration": 0.22670680697812529,
+      "geometric_difference": 28.307744775421693,
+      "geometric_difference_exact": 59.06897544756831,
+      "metric": "binary"
+    }
+  ],
+  "correlations": {
+    "KTA": {
+      "pearson_r": 0.5539847993425877,
+      "pearson_p": 0.004973151550370778,
+      "spearman_r": 0.4847695482618329,
+      "spearman_p": 0.01635788932309788
+    },
+    "Concentration": {
+      "pearson_r": 0.2557224131900232,
+      "pearson_p": 0.22778617538494955,
+      "spearman_r": 0.2506528364441793,
+      "spearman_p": 0.23745709968698797
+    },
+    "Geometric Difference": {
+      "pearson_r": -0.22053485986160584,
+      "pearson_p": 0.30041681848199303,
+      "spearman_r": -0.15578770042884757,
+      "spearman_p": 0.46727819635664014
+    }
+  },
+  "best_predictor": "KTA",
+  "combined_r2_loo": 0.1254897322627334,
+  "exact_g_lambda_sweep": {
+    "0.0001": -0.22991981896369743,
+    "1e-05": -0.2174586655720564,
+    "1e-06": -0.22053485986160584,
+    "1e-07": -0.24169613035456683
+  }
+}
